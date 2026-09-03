@@ -3,129 +3,177 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chetna Dietitian</title>
+
+  <title>Chetna Dietitian | Personalized Nutrition & Diet Plans</title>
 
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+    }
+
+    body {
       font-family: Arial, sans-serif;
-      background: #f7fbf7;
-      color: #243024;
+      background: #fffaf4;
+      color: #333;
+      line-height: 1.7;
     }
 
     header {
-      background: white;
-      padding: 20px 8%;
+      background: #ffffff;
+      padding: 18px 7%;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
       box-shadow: 0 2px 10px rgba(0,0,0,0.08);
       position: sticky;
       top: 0;
+      z-index: 1000;
     }
 
-    .logo {
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand img {
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .brand h2 {
+      color: #245b45;
       font-size: 24px;
-      font-weight: bold;
-      color: #3f7d4b;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
     }
 
     nav a {
+      color: #245b45;
       text-decoration: none;
-      color: #243024;
-      margin-left: 20px;
-      font-weight: 600;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #b68b4c;
     }
 
     .hero {
-      padding: 90px 8%;
+      min-height: 75vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      background: linear-gradient(135deg, #eef8ee, #ffffff);
+      padding: 70px 20px;
+      background: linear-gradient(135deg, #edf5e9, #fff3e8);
+    }
+
+    .hero-content {
+      max-width: 850px;
     }
 
     .hero h1 {
-      font-size: 48px;
-      margin-bottom: 15px;
+      color: #245b45;
+      font-size: 52px;
+      line-height: 1.2;
+      margin-bottom: 20px;
     }
 
     .hero p {
       font-size: 20px;
-      max-width: 700px;
-      margin: auto;
-      line-height: 1.6;
+      color: #555;
+      margin-bottom: 30px;
     }
 
     .btn {
       display: inline-block;
-      margin-top: 25px;
-      padding: 14px 24px;
-      background: #3f7d4b;
+      background: #245b45;
       color: white;
+      padding: 14px 28px;
+      margin: 8px;
+      border-radius: 30px;
       text-decoration: none;
-      border-radius: 8px;
       font-weight: bold;
     }
 
-    section {
-      padding: 70px 8%;
+    .btn:hover {
+      background: #b68b4c;
     }
 
-    h2 {
-      text-align: center;
-      font-size: 34px;
-      margin-bottom: 35px;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 25px;
-    }
-
-    .card {
-      background: white;
-      padding: 25px;
-      border-radius: 14px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.07);
-    }
-
-    .card h3 {
-      color: #3f7d4b;
-    }
-
-    .about { 
-      max-width: 800px;
+    .intro {
+      max-width: 1000px;
       margin: auto;
+      padding: 70px 25px;
       text-align: center;
-      line-height: 1.8;
     }
 
-    .contact {
-      text-align: center;
-      background: #eaf5ea;
-      border-radius: 16px;
-      padding: 50px 20px;
+    .intro h2 {
+      color: #245b45;
+      font-size: 36px;
+      margin-bottom: 18px;
+    }
+
+    .intro p {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .feature {
+      background: white;
+      padding: 28px 18px;
+      border-radius: 15px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.07);
+    }
+
+    .feature h3 {
+      color: #245b45;
+      margin-bottom: 8px;
     }
 
     footer {
-      text-align: center;
-      padding: 25px;
-      background: #243024;
+      background: #245b45;
       color: white;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 40px;
+    }
+
+    footer p {
+      margin: 5px;
     }
 
     @media (max-width: 700px) {
       header {
-        flex-direction: column;
-        gap: 12px;
+        justify-content: center;
+        gap: 15px;
       }
 
-      nav a {
-        margin: 0 8px;
+      nav {
+        justify-content: center;
       }
 
       .hero h1 {
-        font-size: 36px;
+        font-size: 38px;
+      }
+
+      .brand h2 {
+        font-size: 20px;
       }
     }
   </style>
@@ -133,112 +181,88 @@
 
 <body>
 
-  <header>
-   <div class="logo"><img src="D3CB3807-84A4-4927-A0EB-FEA2B22D7262.PNG" alt="Chetna Dietitian Logo" style="height:70px; width:auto;"></div>
+<header>
 
-    <nav>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#plans">Plans</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <div class="brand">
+    <img src="D3CB3807-84A4-4927-A0EB-FEA2B22D7262.PNG" alt="Chetna Dietitian Logo">
+    <h2>Chetna Dietitian</h2>
+  </div>
 
-  <section class="hero">
-    <h1>Healthy Eating. Better Lifestyle. Happier You.</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="plans.html">Plans</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+</header>
+
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <h1>Healthy Eating.<br>Better Lifestyle.<br>Happier You.</h1>
 
     <p>
-      Personalized nutrition guidance, practical diet plans,
-      and online consultations designed around your lifestyle and goals.
+      Personalized nutrition guidance and practical diet plans
+      designed around your lifestyle, food preferences and wellness goals.
     </p>
 
-    <a class="btn" href="#contact">Book a Consultation</a>
-  </section>
+    <a class="btn" href="contact.html">Book a Consultation</a>
+    <a class="btn" href="plans.html">Explore Diet Plans</a>
 
-  <section id="about">
-    <h2>About Chetna</h2>
+  </div>
 
-    <div class="about">
-      <p>
-        My mission is to help people achieve their health and weight goals
-        through personalized nutrition and practical diet plans.
-        I believe healthy eating should be simple, enjoyable and sustainable.
-      </p>
+</section>
+
+
+<section class="intro">
+
+  <h2>Welcome to Chetna Dietitian</h2>
+
+  <p>
+    Helping you build a healthier relationship with food through
+    personalized nutrition, practical meal planning and sustainable
+    lifestyle changes.
+  </p>
+
+  <div class="features">
+
+    <div class="feature">
+      <h3>🥗 Personalized</h3>
+      <p>Nutrition plans designed around your individual lifestyle and preferences.</p>
     </div>
-  </section>
 
-  <section id="services">
-    <h2>My Services</h2>
-
-    <div class="cards">
-
-      <div class="card">
-        <h3>Weight Management</h3>
-        <p>Personalized nutrition plans to support healthy and sustainable weight goals.</p>
-      </div>
-
-      <div class="card">
-        <h3>PCOS Nutrition</h3>
-        <p>Balanced meal guidance designed around healthy lifestyle habits and individual needs.</p>
-      </div>
-
-      <div class="card">
-        <h3>Thyroid-Friendly Plans</h3>
-        <p>Practical nutrition guidance that can complement your medical care and daily routine.</p>
-      </div>
-
-      <div class="card">
-        <h3>Vegetarian Diet Plans</h3>
-        <p>Simple and nutritious vegetarian meal plans with familiar Indian food options.</p>
-      </div>
-
+    <div class="feature">
+      <h3>🌿 Practical</h3>
+      <p>Simple everyday food choices without complicated or unrealistic diets.</p>
     </div>
-  </section>
 
-  <section id="plans">
-    <h2>Popular Plans</h2>
-
-    <div class="cards">
-
-      <div class="card">
-        <h3>7-Day Starter Plan</h3>
-        <p>A simple nutrition guide to help you start building healthier habits.</p>
-        <a class="btn" href="#contact">Get Plan</a>
-      </div>
-
-      <div class="card">
-        <h3>Personalized Diet Plan</h3>
-        <p>A customized diet plan created around your goals, preferences and routine.</p>
-        <a class="btn" href="#contact">Book Now</a>
-      </div>
-
-      <div class="card">
-        <h3>1-Month Nutrition Coaching</h3>
-        <p>Personalized guidance with follow-up support to help you stay consistent.</p>
-        <a class="btn" href="#contact">Join Now</a>
-      </div>
-
+    <div class="feature">
+      <h3>⚖️ Balanced</h3>
+      <p>A balanced approach to nutrition, wellness and long-term weight management.</p>
     </div>
-  </section>
 
-  <section id="contact">
-    <div class="contact">
-      <h2>Start Your Health Journey</h2>
-
-      <p>
-        Ready for a personalized nutrition plan?
-        Get in touch for consultations and diet programs.
-      </p>
-
-      <a class="btn" href="https://wa.me/919217373707">Chat on WhatsApp</a>
-      <br><br>
-      <p>Instagram: @Chetna.dietitian</p>
+    <div class="feature">
+      <h3>💚 Supportive</h3>
+      <p>Guidance and motivation to help you stay consistent with your wellness journey.</p>
     </div>
-  </section>
 
-  <footer>
-    © 2026 Chetna Dietitian. All rights reserved.
-  </footer>
+  </div>
+
+</section>
+
+
+<footer>
+
+  <p><strong>Chetna Dietitian</strong></p>
+  <p>Eat Smart • Live Healthy • Feel Better</p>
+  <p>© 2026 Chetna Dietitian. All Rights Reserved.</p>
+
+</footer>
 
 </body>
 </html>
