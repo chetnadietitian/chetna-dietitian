@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Protein in Your Everyday Meals | Chetna Dietitian</title>
+<meta name="description" content="Learn practical ways to include protein in everyday meals with vegetarian and non-vegetarian food sources.">
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+
+:root{
+ --green:#173f35;
+ --green2:#28594a;
+ --sage:#dce8dc;
+ --cream:#fffaf4;
+ --peach:#e9b59e;
+ --peachlight:#f7e1d5;
+ --gold:#c9a46c;
+ --white:#fff;
+ --text:#3e463f;
+}
+
+body{
+ font-family:Arial,Helvetica,sans-serif;
+ background:var(--cream);
+ color:var(--text);
+ line-height:1.8;
+}
+
+header{
+ background:rgba(255,255,255,.97);
+ padding:14px 6%;
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ position:sticky;
+ top:0;
+ z-index:1000;
+ box-shadow:0 3px 20px rgba(0,0,0,.06);
+}
+
+.brand{
+ display:flex;
+ align-items:center;
+ gap:12px;
+}
+
+.brand img{
+ width:66px;
+ height:66px;
+ border-radius:50%;
+ object-fit:cover;
+ border:2px solid var(--gold);
+}
+
+.brand-text h2{
+ color:var(--green);
+ font-size:22px;
+ line-height:1.2;
+}
+
+.brand-text small{
+ color:#8a765a;
+ letter-spacing:1px;
+}
+
+nav{
+ display:flex;
+ align-items:center;
+ flex-wrap:wrap;
+}
+
+nav a{
+ color:var(--green);
+ text-decoration:none;
+ font-weight:600;
+ margin:8px 12px;
+}
+
+nav a:hover{color:#b46f55}
+
+.header-btn{
+ background:var(--green);
+ color:white!important;
+ padding:11px 20px;
+ border-radius:30px;
+}
+
+.hero{
+ padding:100px 7% 85px;
+ text-align:center;
+ background:
+ radial-gradient(circle at 10% 20%,#f2d3c4 0,transparent 28%),
+ radial-gradient(circle at 90% 80%,#dce8dc 0,transparent 30%),
+ #fff8f1;
+}
+
+.category{
+ color:#a8644d;
+ letter-spacing:2px;
+ font-size:12px;
+ font-weight:bold;
+}
+
+.hero h1{
+ max-width:920px;
+ margin:14px auto 22px;
+ color:var(--green);
+ font-family:Georgia,"Times New Roman",serif;
+ font-size:60px;
+ font-weight:500;
+ line-height:1.12;
+}
+
+.hero h1 span{
+ color:#b46f55;
+ font-style:italic;
+}
+
+.hero p{
+ max-width:760px;
+ margin:auto;
+ color:#626c64;
+ font-size:19px;
+}
+
+.hero-icon{
+ width:100px;
+ height:100px;
+ margin:30px auto 0;
+ background:white;
+ border-radius:50%;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ font-size:52px;
+ box-shadow:0 10px 30px rgba(23,63,53,.09);
+}
+
+.article{
+ max-width:850px;
+ margin:auto;
+ padding:80px 25px;
+}
+
+.back{
+ display:inline-block;
+ color:#a8644d;
+ text-decoration:none;
+ font-weight:bold;
+ margin-bottom:35px;
+}
+
+.article h2{
+ color:var(--green);
+ font-family:Georgia,serif;
+ font-size:36px;
+ line-height:1.25;
+ font-weight:500;
+ margin:48px 0 16px;
+}
+
+.article h3{
+ color:var(--green);
+ font-size:21px;
+ margin:28px 0 8px;
+}
+
+.article p{
+ margin-bottom:18px;
+ color:#566159;
+}
+
+.article ul{
+ margin:15px 0 25px 22px;
+ color:#566159;
+}
+
+.article li{
+ margin:9px 0;
+ padding-left:5px;
+}
+
+.takeaway{
+ background:#eef3ea;
+ border-left:5px solid var(--gold);
+ padding:30px;
+ border-radius:5px 22px 22px 5px;
+ margin:15px 0 45px;
+}
+
+.takeaway strong{
+ display:block;
+ color:var(--green);
+ font-size:19px;
+ margin-bottom:7px;
+}
+
+.source-grid{
+ display:grid;
+ grid-template-columns:repeat(2,1fr);
+ gap:18px;
+ margin:28px 0 38px;
+}
+
+.source{
+ background:white;
+ border:1px solid #eee3d7;
+ border-radius:20px;
+ padding:24px;
+ box-shadow:0 5px 20px rgba(0,0,0,.035);
+}
+
+.source strong{
+ display:block;
+ color:var(--green);
+ margin-bottom:6px;
+}
+
+.dark-box{
+ background:var(--green);
+ color:white;
+ padding:38px;
+ border-radius:28px;
+ margin:35px 0;
+}
+
+.dark-box h3{
+ color:#f2c9b7;
+ font-family:Georgia,serif;
+ font-size:28px;
+ margin:0 0 18px;
+}
+
+.dark-box p,
+.dark-box ul{
+ color:#e5ede8;
+}
+
+.tip{
+ background:var(--peachlight);
+ padding:27px 30px;
+ border-radius:22px;
+ margin:35px 0;
+}
+
+.tip strong{
+ color:#914f3b;
+}
+
+.disclaimer{
+ background:#f3f0e9;
+ padding:24px;
+ border-radius:18px;
+ margin-top:45px;
+ font-size:14px;
+ color:#62685f;
+}
+
+.cta{
+ margin:20px 7% 90px;
+ padding:70px 30px;
+ border-radius:35px;
+ background:
+ radial-gradient(circle at right,#416b5a 0,transparent 40%),
+ var(--green);
+ text-align:center;
+ color:white;
+}
+
+.cta h2{
+ font-family:Georgia,serif;
+ font-size:44px;
+ font-weight:500;
+ margin:10px 0 15px;
+}
+
+.cta p{
+ max-width:650px;
+ margin:0 auto 25px;
+ color:#e4ece7;
+}
+
+.btn{
+ display:inline-block;
+ background:#f2c9b7;
+ color:var(--green);
+ text-decoration:none;
+ padding:14px 28px;
+ border-radius:30px;
+ font-weight:bold;
+ transition:.3s;
+}
+
+.btn:hover{
+ transform:translateY(-3px);
+ box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+footer{
+ background:#102f28;
+ color:#dfe8e2;
+ padding:60px 7% 25px;
+}
+
+.footer-grid{
+ max-width:1180px;
+ margin:auto;
+ display:grid;
+ grid-template-columns:2fr 1fr 1fr 1.3fr;
+ gap:35px;
+}
+
+.footer-brand{
+ display:flex;
+ align-items:center;
+ gap:12px;
+ margin-bottom:15px;
+}
+
+.footer-brand img{
+ width:65px;
+ height:65px;
+ object-fit:cover;
+ border-radius:50%;
+ border:2px solid var(--gold);
+}
+
+footer h3{
+ color:white;
+ margin-bottom:15px;
+}
+
+footer a{
+ color:#dfe8e2;
+ text-decoration:none;
+ display:block;
+ margin:8px 0;
+}
+
+footer a:hover{color:#efc3af}
+
+.footer-bottom{
+ max-width:1180px;
+ margin:40px auto 0;
+ padding-top:22px;
+ border-top:1px solid rgba(255,255,255,.12);
+ text-align:center;
+ font-size:14px;
+}
+
+@media(max-width:800px){
+ .source-grid{grid-template-columns:1fr}
+ .footer-grid{grid-template-columns:1fr 1fr}
+}
+
+@media(max-width:700px){
+ header{justify-content:center}
+
+ .brand{
+  width:100%;
+  justify-content:center;
+  margin-bottom:8px;
+ }
+
+ nav{justify-content:center}
+
+ nav a{
+  margin:5px 7px;
+  font-size:13px;
+ }
+
+ .header-btn{padding:7px 12px}
+
+ .hero{padding:70px 22px}
+
+ .hero h1{font-size:42px}
+
+ .article h2{font-size:31px}
+
+ .cta h2{font-size:36px}
+
+ .footer-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="brand">
+
+<img
+src="D3CB3807-84A4-4927-A0EB-FEA2B22D7262.PNG"
+alt="Chetna Dietitian Logo">
+
+<div class="brand-text">
+<h2>Chetna Dietitian</h2>
+<small>Nutrition • Wellness • Lifestyle</small>
+</div>
+
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="plans.html">Plans</a>
+<a href="blog.html">Blog</a>
+<a href="contact.html">Contact</a>
+<a class="header-btn" href="contact.html">Book Consultation</a>
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<span class="category">NUTRITION BASICS • PROTEIN</span>
+
+<h1>
+Protein in Your <span>Everyday Meals</span>
+</h1>
+
+<p>
+Protein is an important part of a balanced diet, but getting
+enough does not have to mean complicated recipes or relying
+only on supplements.
+</p>
+
+<div class="hero-icon">💪</div>
+
+</section>
+
+
+<main class="article">
+
+<a class="back" href="blog.html">
+← Back to All Blogs
+</a>
+
+<div class="takeaway">
+
+<strong>Quick Takeaway</strong>
+
+Aim to include a suitable protein source across your meals
+rather than depending on one very large protein-heavy meal.
+Your needs can vary depending on your body, activity level,
+age, health and individual goals.
+
+</div>
+
+<p>
+Protein gets a lot of attention in nutrition conversations,
+and for good reason. It contributes to many important body
+functions and is part of a balanced eating pattern.
+</p>
+
+<p>
+The good news is that protein can come from many familiar
+foods, both vegetarian and non-vegetarian.
+</p>
+
+
+<h2>What Does Protein Do?</h2>
+
+<p>
+Protein provides amino acids that the body uses for many
+normal functions, including maintaining and repairing tissues.
+It is also an important nutritional component of muscles,
+skin, enzymes and other body structures.
+</p>
+
+<p>
+You do not need to make every meal extremely high in protein.
+The goal is to include appropriate amounts as part of an
+overall balanced diet.
+</p>
+
+
+<h2>Vegetarian Protein Sources</h2>
+
+<div class="source-grid">
+
+<div class="source">
+<strong>🌿 Dals</strong>
+Moong, masoor, toor, urad and other dals can contribute
+protein to everyday Indian meals.
+</div>
+
+<div class="source">
+<strong>🫘 Beans & Chickpeas</strong>
+Rajma, chana, lobia and other legumes can provide both
+protein and fibre.
+</div>
+
+<div class="source">
+<strong>🥛 Curd & Yoghurt</strong>
+Unsweetened curd or yoghurt can be a convenient protein
+source where dairy is suitable.
+</div>
+
+<div class="source">
+<strong>🧀 Paneer</strong>
+Paneer can be used in meals, wraps, salads or breakfast
+according to individual needs.
+</div>
+
+<div class="source">
+<strong>🌱 Tofu & Soy Foods</strong>
+Tofu and other suitable soy foods can add variety to
+vegetarian protein choices.
+</div>
+
+<div class="source">
+<strong>🥜 Nuts & Seeds</strong>
+Nuts and seeds contribute protein as well as fats, so
+portion awareness can still be useful.
+</div>
+
+</div>
+
+
+<h2>Non-Vegetarian Protein Sources</h2>
+
+<p>
+People who include animal foods may choose options such as
+eggs, fish or chicken according to their preferences,
+medical needs and overall eating pattern.
+</p>
+
+<div class="source-grid">
+
+<div class="source">
+<strong>🥚 Eggs</strong>
+Eggs can be used at breakfast, in meals or as part of a
+balanced snack or dish.
+</div>
+
+<div class="source">
+<strong>🐟 Fish</strong>
+Fish can provide protein and can be prepared using simple,
+balanced cooking methods.
+</div>
+
+<div class="source">
+<strong>🍗 Chicken</strong>
+Chicken can be included in appropriate portions alongside
+vegetables and other balanced foods.
+</div>
+
+<div class="source">
+<strong>🥛 Dairy Foods</strong>
+Milk, curd and other suitable dairy foods may also contribute
+protein to the day.
+</div>
+
+</div>
+
+
+<h2>Spread Protein Across the Day</h2>
+
+<p>
+Instead of eating very little protein through most of the
+day and trying to make up for it at dinner, it can be useful
+to include protein at several meals.
+</p>
+
+<div class="dark-box">
+
+<h3>A Simple Day Could Look Like</h3>
+
+<ul>
+<li>Breakfast: moong chilla with curd, or eggs with whole-grain toast.</li>
+<li>Lunch: dal or rajma with vegetables and a suitable grain.</li>
+<li>Snack: curd, roasted chana or another suitable option.</li>
+<li>Dinner: paneer, tofu, dal, fish or chicken with vegetables.</li>
+</ul>
+
+</div>
+
+
+<h2>Protein at Breakfast</h2>
+
+<p>
+Breakfast can sometimes be mostly carbohydrates, especially
+when it is based only on toast, biscuits or sweet cereal.
+</p>
+
+<p>
+Adding foods such as curd, paneer, tofu, besan, moong dal,
+milk or eggs can help create a more balanced breakfast.
+</p>
+
+
+<h2>Protein in Indian Meals</h2>
+
+<p>
+You do not need a completely different eating style to
+increase protein. Many Indian meals can be adjusted simply.
+</p>
+
+<ul>
+<li>Add dal to a meal that otherwise contains only roti and sabzi.</li>
+<li>Pair vegetable poha with curd or another suitable protein source.</li>
+<li>Use paneer or tofu in a vegetable dish.</li>
+<li>Choose rajma, chana or lobia regularly for variety.</li>
+<li>Use besan or moong dal chilla as a breakfast option.</li>
+</ul>
+
+
+<div class="tip">
+
+<strong>Chetna's Practical Tip:</strong>
+Before changing your entire menu, look at each main meal and ask:
+“Where is my protein source?”
+
+</div>
+
+
+<h2>Do You Need Protein Powder?</h2>
+
+<p>
+Not everyone needs a protein supplement. Many people can
+meet their protein needs through food.
+</p>
+
+<p>
+A supplement may sometimes be useful for particular individuals,
+but the choice should consider total dietary intake, health
+conditions and individual needs.
+</p>
+
+<p>
+If you are considering a supplement, especially if you have
+kidney disease or another medical condition, discuss it with
+an appropriate healthcare professional.
+</p>
+
+
+<h2>More Protein Is Not Always Better</h2>
+
+<p>
+Protein is important, but a healthy diet also needs vegetables,
+fruits, carbohydrates, fats, vitamins, minerals and fibre.
+</p>
+
+<p>
+A meal should not become balanced only by adding more and
+more protein while ignoring the rest of the diet.
+</p>
+
+
+<h2>Common Protein Mistakes</h2>
+
+<ul>
+<li>Thinking vegetarian diets cannot contain useful protein.</li>
+<li>Relying only on paneer while ignoring dals, beans and other foods.</li>
+<li>Assuming every person needs the same amount of protein.</li>
+<li>Using supplements without considering the rest of the diet.</li>
+<li>Eating protein but very few vegetables or fibre-rich foods.</li>
+<li>Trying to get all daily protein from one meal.</li>
+</ul>
+
+
+<h2>How Much Protein Do You Need?</h2>
+
+<p>
+There is no single protein target that is appropriate for
+every person. Needs can differ based on age, body size,
+activity level, pregnancy, health status and individual goals.
+</p>
+
+<p>
+This is one reason personalized nutrition guidance can be
+helpful when someone wants a more precise plan.
+</p>
+
+
+<h2>Keep It Simple</h2>
+
+<p>
+Protein does not need to become complicated. Start with the
+foods you already enjoy and gradually create more balanced
+meals.
+</p>
+
+<p>
+For many people, the easiest first step is simply making sure
+that breakfast, lunch and dinner each contain an appropriate
+protein source.
+</p>
+
+
+<div class="disclaimer">
+
+<strong>General information:</strong>
+This article is for general nutrition education and does not
+provide an individualized protein prescription. Protein needs
+vary. People with kidney disease, liver disease or other medical
+conditions should discuss appropriate protein intake with their
+qualified healthcare professional.
+
+</div>
+
+</main>
+
+
+<section class="cta">
+
+<span class="category" style="color:#f2c9b7">
+PERSONALIZED NUTRITION
+</span>
+
+<h2>Not Sure How Much Protein You Need?</h2>
+
+<p>
+Personalized guidance can help you build balanced meals around
+your food preferences, lifestyle and individual nutrition goals.
+</p>
+
+<a class="btn" href="contact.html">
+Book a Consultation
+</a>
+
+</section>
+
+
+<footer>
+
+<div class="footer-grid">
+
+<div>
+
+<div class="footer-brand">
+
+<img
+src="D3CB3807-84A4-4927-A0EB-FEA2B22D7262.PNG"
+alt="Chetna Dietitian Logo">
+
+<h3>Chetna Dietitian</h3>
+
+</div>
+
+<p>
+Personalized nutrition guidance for healthier,
+more practical and sustainable everyday living.
+</p>
+
+<p style="margin-top:15px">
+<strong>Eat Smart • Live Healthy • Feel Better</strong>
+</p>
+
+</div>
+
+<div>
+
+<h3>Quick Links</h3>
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="plans.html">Plans</a>
+<a href="blog.html">Blog</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+<div>
+
+<h3>More Articles</h3>
+
+<a href="blog-breakfast.html">Healthy Breakfast</a>
+<a href="blog-weight-management.html">Weight Management</a>
+<a href="blog-thyroid.html">Thyroid Nutrition</a>
+<a href="blog-blood-sugar.html">Blood Sugar</a>
+<a href="blog-healthy-habits.html">Healthy Habits</a>
+
+</div>
+
+<div>
+
+<h3>Start Your Journey</h3>
+
+<p>
+Looking for personalized nutrition guidance?
+Get in touch to discuss your goals.
+</p>
+
+<a class="btn"
+style="margin-top:15px"
+href="contact.html">
+Contact Chetna
+</a>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 Chetna Dietitian. All Rights Reserved.
+</div>
+
+</footer>
+
+</body>
+</html>
