@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Smarter Eating for Blood Sugar | Chetna Dietitian</title>
+<meta name="description" content="Learn practical ways to build balanced meals for blood sugar management, including carbohydrates, protein, fibre, portions and everyday healthy habits.">
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+
+:root{
+ --green:#173f35;
+ --green2:#28594a;
+ --sage:#dce8dc;
+ --cream:#fffaf4;
+ --peach:#e9b59e;
+ --peachlight:#f7e1d5;
+ --gold:#c9a46c;
+ --white:#fff;
+ --text:#3e463f;
+}
+
+body{
+ font-family:Arial,Helvetica,sans-serif;
+ background:var(--cream);
+ color:var(--text);
+ line-height:1.8;
+}
+
+/* HEADER */
+
+header{
+ background:rgba(255,255,255,.97);
+ padding:14px 6%;
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ position:sticky;
+ top:0;
+ z-index:1000;
+ box-shadow:0 3px 20px rgba(0,0,0,.06);
+}
+
+.brand{
+ display:flex;
+ align-items:center;
+ gap:12px;
+}
+
+.brand img{
+ width:66px;
+ height:66px;
+ border-radius:50%;
+ object-fit:cover;
+ border:2px solid var(--gold);
+}
+
+.brand-text h2{
+ color:var(--green);
+ font-size:22px;
+ line-height:1.2;
+}
+
+.brand-text small{
+ color:#8a765a;
+ letter-spacing:1px;
+}
+
+nav{
+ display:flex;
+ align-items:center;
+ flex-wrap:wrap;
+}
+
+nav a{
+ color:var(--green);
+ text-decoration:none;
+ font-weight:600;
+ margin:8px 12px;
+}
+
+nav a:hover{color:#b46f55}
+
+.header-btn{
+ background:var(--green);
+ color:white!important;
+ padding:11px 20px;
+ border-radius:30px;
+}
+
+/* HERO */
+
+.hero{
+ padding:100px 7% 85px;
+ text-align:center;
+ background:
+ radial-gradient(circle at 10% 20%,#f2d3c4 0,transparent 28%),
+ radial-gradient(circle at 90% 80%,#dce8dc 0,transparent 30%),
+ #fff8f1;
+}
+
+.category{
+ color:#a8644d;
+ letter-spacing:2px;
+ font-size:12px;
+ font-weight:bold;
+}
+
+.hero h1{
+ max-width:920px;
+ margin:14px auto 22px;
+ color:var(--green);
+ font-family:Georgia,"Times New Roman",serif;
+ font-size:60px;
+ font-weight:500;
+ line-height:1.12;
+}
+
+.hero h1 span{
+ color:#b46f55;
+ font-style:italic;
+}
+
+.hero p{
+ max-width:760px;
+ margin:auto;
+ color:#626c64;
+ font-size:19px;
+}
+
+.hero-icon{
+ width:100px;
+ height:100px;
+ margin:30px auto 0;
+ background:white;
+ border-radius:50%;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ font-size:52px;
+ box-shadow:0 10px 30px rgba(23,63,53,.09);
+}
+
+/* ARTICLE */
+
+.article{
+ max-width:850px;
+ margin:auto;
+ padding:80px 25px;
+}
+
+.back{
+ display:inline-block;
+ color:#a8644d;
+ text-decoration:none;
+ font-weight:bold;
+ margin-bottom:35px;
+}
+
+.article h2{
+ color:var(--green);
+ font-family:Georgia,serif;
+ font-size:36px;
+ line-height:1.25;
+ font-weight:500;
+ margin:48px 0 16px;
+}
+
+.article p{
+ margin-bottom:18px;
+ color:#566159;
+}
+
+.article ul{
+ margin:15px 0 25px 22px;
+ color:#566159;
+}
+
+.article li{
+ margin:9px 0;
+ padding-left:5px;
+}
+
+/* TAKEAWAY */
+
+.takeaway{
+ background:#eef3ea;
+ border-left:5px solid var(--gold);
+ padding:30px;
+ border-radius:5px 22px 22px 5px;
+ margin:15px 0 45px;
+}
+
+.takeaway strong{
+ display:block;
+ color:var(--green);
+ font-size:19px;
+ margin-bottom:7px;
+}
+
+/* PLATE */
+
+.plate{
+ background:var(--green);
+ color:white;
+ padding:38px;
+ border-radius:28px;
+ margin:35px 0;
+}
+
+.plate h3{
+ color:#f2c9b7;
+ font-family:Georgia,serif;
+ font-size:29px;
+ margin-bottom:20px;
+}
+
+.plate-grid{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:15px;
+}
+
+.plate-box{
+ background:rgba(255,255,255,.09);
+ border:1px solid rgba(255,255,255,.1);
+ padding:20px;
+ border-radius:18px;
+}
+
+.plate-box strong{
+ color:#f2c9b7;
+ display:block;
+ margin-bottom:5px;
+}
+
+.plate-box span{
+ color:#e5ede8;
+ font-size:14px;
+}
+
+/* FOOD CARDS */
+
+.food-grid{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:18px;
+ margin:28px 0 38px;
+}
+
+.food{
+ background:white;
+ border:1px solid #eee3d7;
+ border-radius:20px;
+ padding:24px;
+ box-shadow:0 5px 20px rgba(0,0,0,.035);
+}
+
+.food strong{
+ color:var(--green);
+ display:block;
+ margin-bottom:6px;
+}
+
+/* TIP */
+
+.tip{
+ background:var(--peachlight);
+ padding:27px 30px;
+ border-radius:22px;
+ margin:35px 0;
+}
+
+.tip strong{
+ color:#914f3b;
+}
+
+/* MEDICAL */
+
+.medical{
+ background:#fff;
+ border:1px solid #e5d7c5;
+ padding:30px;
+ border-radius:22px;
+ margin:35px 0;
+}
+
+.medical strong{
+ display:block;
+ color:var(--green);
+ font-size:19px;
+ margin-bottom:7px;
+}
+
+.disclaimer{
+ background:#f3f0e9;
+ padding:24px;
+ border-radius:18px;
+ margin-top:45px;
+ font-size:14px;
+ color:#62685f;
+}
+
+/* CTA */
+
+.cta{
+ margin:20px 7% 90px;
+ padding:70px 30px;
+ border-radius:35px;
+ background:
+ radial-gradient(circle at right,#416b5a 0,transparent 40%),
+ var(--green);
+ text-align:center;
+ color:white;
+}
+
+.cta h2{
+ font-family:Georgia,serif;
+ font-size:44px;
+ font-weight:500;
+ margin:10px 0 15px;
+}
+
+.cta p{
+ max-width:650px;
+ margin:0 auto 25px;
+ color:#e4ece7;
+}
+
+.btn{
+ display:inline-block;
+ background:#f2c9b7;
+ color:var(--green);
+ text-decoration:none;
+ padding:14px 28px;
+ border-radius:30px;
+ font-weight:bold;
+ transition:.3s;
+}
+
+.btn:hover{
+ transform:translateY(-3px);
+ box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+/* FOOTER */
+
+footer{
+ background:#102f28;
+ color:#dfe8e2;
+ padding:60px 7% 25px;
+}
+
+.footer-grid{
+ max-width:1180px;
+ margin:auto;
+ display:grid;
+ grid-template-columns:2fr 1fr 1fr 1.3fr;
+ gap:35px;
+}
+
+.footer-brand{
+ display:flex;
+ align-items:center;
+ gap:12px;
+ margin-bottom:15px;
+}
+
+.footer-brand img{
+ width:65px;
+ height:65px;
+ object-fit:cover;
+ border-radius:50%;
+ border:2px solid var(--gold);
+}
+
+footer h3{
+ color:white;
+ margin-bottom:15px;
+}
+
+footer a{
+ color:#dfe8e2;
+ text-decoration:none;
+ display:block;
+ margin:8px 0;
+}
+
+footer a:hover{color:#efc3af}
+
+.footer-bottom{
+ max-width:1180px;
+ margin:40px auto 0;
+ padding-top:22px;
+ border-top:1px solid rgba(255,255,255,.12);
+ text-align:center;
+ font-size:14px;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+ .plate-grid,
+ .food-grid{
+  grid-template-columns:1fr;
+ }
+
+ .footer-grid{
+  grid-template-columns:1fr 1fr;
+ }
+}
+
+@media(max-width:700px){
+ header{justify-content:center}
+
+ .brand{
+  width:100%;
+  justify-content:center;
+  margin-bottom:8px;
+ }
+
+ nav{justify-content:center}
+
+ nav a{
+  margin:5px 7px;
+  font-size:13px;
+ }
+
+ .header-btn{padding:7px 12px}
+
+ .hero{padding:70px 22px}
+ .hero h1{font-size:42px}
+ .article h2{font-size:31px}
+ .cta h2{font-size:36px}
+
+ .footer-grid{
+  grid-template-columns:1fr;
+ }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="brand">
+
+<img
+src="D3CB3807-84A4-4927-A0EB-FEA2B22D7262.PNG"
+alt="Chetna Dietitian Logo">
+
+<div class="brand-text">
+<h2>Chetna Dietitian</h2>
+<small>Nutrition • Wellness • Lifestyle</small>
+</div>
+
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="plans.html">Plans</a>
+<a href="blog.html">Blog</a>
+<a href="contact.html">Contact</a>
+<a class="header-btn" href="contact.html">Book Consultation</a>
+</nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<span class="category">BLOOD SUGAR • BALANCED NUTRITION</span>
+
+<h1>
+Smarter Eating for<br>
+<span>Blood Sugar</span>
+</h1>
+
+<p>
+Supporting healthy blood sugar is not simply about removing
+all carbohydrates. Meal balance, portions, food quality and
+everyday lifestyle habits all deserve attention.
+</p>
+
+<div class="hero-icon">🩸</div>
+
+</section>
+
+
+<!-- ARTICLE -->
+
+<main class="article">
+
+<a class="back" href="blog.html">
+← Back to All Blogs
+</a>
+
+
+<div class="takeaway">
+
+<strong>Quick Takeaway</strong>
+
+Think about the whole meal rather than focusing on one food.
+Combining suitable carbohydrate portions with vegetables,
+protein and fibre can help create more balanced everyday meals.
+
+</div>
+
+
+<p>
+When someone is told that their blood sugar is higher than
+expected, one of the first questions is often:
+“Do I need to stop eating carbohydrates?”
+</p>
+
+<p>
+Carbohydrates do affect blood glucose, but that does not mean
+every carbohydrate food needs to disappear from your plate.
+The type of food, amount eaten, what it is paired with and
+your individual health needs all matter.
+</p>
+
+
+<h2>Build a More Balanced Plate</h2>
+
+<p>
+A simple meal structure can make healthy eating easier to
+understand. Exact portions should still be personalized,
+especially for people with diabetes or other medical conditions.
+</p>
+
+
+<div class="plate">
+
+<h3>Think: Vegetables + Protein + Carbohydrate</h3>
+
+<div class="plate-grid">
+
+<div class="plate-box">
+<strong>🥗 Vegetables</strong>
+<span>
+Include a variety of non-starchy vegetables to add fibre,
+volume and nutritional variety.
+</span>
+</div>
+
+<div class="plate-box">
+<strong>💪 Protein</strong>
+<span>
+Use suitable sources such as dal, paneer, tofu, curd,
+beans, eggs, fish or chicken.
+</span>
+</div>
+
+<div class="plate-box">
+<strong>🌾 Carbohydrate</strong>
+<span>
+Choose an appropriate portion of roti, rice, oats,
+millets or another suitable carbohydrate source.
+</span>
+</div>
+
+</div>
+
+</div>
+
+
+<h2>Carbohydrates Are Not All the Same</h2>
+
+<p>
+Carbohydrates are found in many foods, including grains,
+fruit, milk, legumes and starchy vegetables.
+</p>
+
+<p>
+Rather than thinking only in terms of “carbs” versus
+“no carbs,” consider food quality and portion size.
+Whole and minimally processed foods can provide fibre and
+other nutrients along with carbohydrates.
+</p>
+
+
+<h2>Protein Can Help Build a Complete Meal</h2>
+
+<p>
+Protein is an important part of balanced eating. Depending
+on your preferences, useful sources may include dal, beans,
+chickpeas, paneer, tofu, curd and other suitable foods.
+</p>
+
+<p>
+People who eat non-vegetarian foods may also include eggs,
+fish or chicken.
+</p>
+
+<p>
+Instead of having a meal made almost entirely from
+carbohydrate foods, consider where your protein source is.
+</p>
+
+
+<h2>Include Fibre-Rich Foods</h2>
+
+<p>
+Vegetables, whole fruits, legumes and whole grains can
+contribute dietary fibre.
+</p>
+
+<div class="food-grid">
+
+<div class="food">
+<strong>🥦 Vegetables</strong>
+Add vegetables generously to meals where appropriate.
+</div>
+
+<div class="food">
+<strong>🫘 Legumes</strong>
+Dal, rajma, chana and other legumes provide fibre as well
+as plant protein.
+</div>
+
+<div class="food">
+<strong>🍎 Whole Fruit</strong>
+Whole fruit can generally offer more fibre than juice.
+Individual portions still matter.
+</div>
+
+<div class="food">
+<strong>🌾 Whole Foods</strong>
+Choose less-refined options more often when suitable for you.
+</div>
+
+</div>
+
+
+<div class="tip">
+
+<strong>Chetna's Practical Tip:</strong>
+Instead of eating plain carbohydrates by themselves,
+think about what protein and fibre-rich foods you can add
+to create a more balanced meal.
+
+</div>
+
+
+<h2>What About Rice and Roti?</h2>
+
+<p>
+People with high blood sugar are sometimes told that they
+must completely eliminate rice or roti.
+</p>
+
+<p>
+For many people, the more useful questions are how much is
+being eaten, what type is chosen, what else is on the plate,
+and how that meal fits into the overall diet.
+</p>
+
+<p>
+Individual responses can differ, which is why people with
+diabetes should follow personalized recommendations from
+their healthcare team.
+</p>
+
+
+<h2>Whole Fruit vs Fruit Juice</h2>
+
+<p>
+Fruit can be part of a balanced eating pattern. Whole fruit
+provides fibre and generally requires more chewing than juice.
+</p>
+
+<p>
+Fruit juice can be easy to consume quickly and may contain
+the carbohydrate from several pieces of fruit in one drink.
+Choosing whole fruit more often can therefore be a practical
+habit for many people.
+</p>
+
+
+<h2>Pay Attention to Sugary Drinks</h2>
+
+<p>
+Soft drinks, sweetened juices, sweet tea or coffee and other
+sugar-sweetened beverages can add significant amounts of
+sugar quickly.
+</p>
+
+<p>
+Water is a useful main beverage for everyday hydration.
+Other drinks can be chosen thoughtfully according to
+individual needs.
+</p>
+
+
+<h2>Don't Skip Meals Just to “Save Calories”</h2>
+
+<p>
+Some people respond to high blood sugar by drastically
+reducing food or regularly skipping meals.
+</p>
+
+<p>
+This may not be appropriate, particularly for someone taking
+glucose-lowering medication. Meal timing needs can vary
+depending on medication, activity and individual health.
+</p>
+
+
+<div class="medical">
+
+<strong>If You Take Diabetes Medication</strong>
+
+Do not dramatically change your carbohydrate intake, meal
+timing or fasting routine without discussing it with your
+doctor or diabetes-care professional. Some medicines can
+increase the risk of low blood sugar when food intake changes.
+
+</div>
+
+
+<h2>Movement Matters Too</h2>
+
+<p>
+Regular physical activity is an important part of overall
+health and blood sugar management.
+</p>
+
+<p>
+Walking, resistance exercise and other forms of movement may
+be appropriate depending on your health and ability.
+If you are beginning a new exercise routine and have a
+medical condition, seek appropriate professional guidance.
+</p>
+
+
+<h2>Sleep and Daily Routine Matter</h2>
+
+<p>
+Nutrition is important, but it is not the only part of
+metabolic health. Sleep, physical activity, stress and
+medication adherence can also influence your overall routine.
+</p>
+
+<p>
+Instead of searching for one miracle food, work on the
+combination of habits that you can maintain.
+</p>
+
+
+<h2>Simple Everyday Habits</h2>
+
+<ul>
+<li>Include vegetables regularly.</li>
+<li>Add an appropriate protein source to meals.</li>
+<li>Choose whole and minimally processed foods more often.</li>
+<li>Be mindful of carbohydrate portions.</li>
+<li>Choose whole fruit more often than fruit juice.</li>
+<li>Limit frequent sugar-sweetened drinks.</li>
+<li>Stay physically active according to your ability.</li>
+<li>Follow your prescribed medication and monitoring plan.</li>
+</ul>
+
+
+<h2>Prediabetes Is Worth Taking Seriously</h2>
+
+<p>
+Prediabetes means blood glucose levels are higher than normal
+but not yet in the diabetes range. It is an important signal
+to discuss lifestyle, nutrition and appropriate follow-up
+with your healthcare professional.
+</p>
+
+<p>
+Do not depend on a single food, drink or home remedy to
+manage blood sugar. Sustainable lifestyle changes and
+appropriate medical monitoring are much more important.
+</p>
+
+
+<h2>Personalization Matters</h2>
+
+<p>
+There is no single meal plan that is right for everyone
+with prediabetes or diabetes.
+</p>
+
+<p>
+Food preferences, medication, activity, body composition,
+other medical conditions and blood glucose response can all
+influence the appropriate nutrition approach.
+</p>
+
+
+<div class="disclaimer">
+
+<strong>Medical & Nutrition Disclaimer:</strong>
+This article provides general nutrition education only and
+does not diagnose or treat diabetes or prediabetes. If you
+have high blood sugar, diabetes or take glucose-lowering
+medication, work with your qualified healthcare team for
+individualized advice. Do not stop or change medication
+based on this article.
+
+</div>
+
+</main>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<span class="category" style="color:#f2c9b7">
+PERSONALIZED NUTRITION
+</span>
+
+<h2>Need Help Building Balanced Meals?</h2>
+
+<p>
+Personalized nutrition guidance can help you make practical
+food choices around your lifestyle, preferences and individual
+health needs while complementing appropriate medical care.
+</p>
+
+<a class="btn" href="contact.html">
+Book a Consultation
+</a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-grid">
+
+<div>
+
+<div class="footer-brand">
+
+<img
+src="D3CB3807-84A4-4927-A0EB-FEA2B22D7262.PNG"
+alt="Chetna Dietitian Logo">
+
+<h3>Chetna Dietitian</h3>
+
+</div>
+
+<p>
+Personalized nutrition guidance for healthier,
+more practical and sustainable everyday living.
+</p>
+
+<p style="margin-top:15px">
+<strong>Eat Smart • Live Healthy • Feel Better</strong>
+</p>
+
+</div>
+
+
+<div>
+
+<h3>Quick Links</h3>
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="plans.html">Plans</a>
+<a href="blog.html">Blog</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+
+<div>
+
+<h3>More Articles</h3>
+
+<a href="blog-breakfast.html">Healthy Breakfast</a>
+<a href="blog-weight-management.html">Weight Management</a>
+<a href="blog-protein.html">Protein</a>
+<a href="blog-thyroid.html">Thyroid Nutrition</a>
+<a href="blog-healthy-habits.html">Healthy Habits</a>
+
+</div>
+
+
+<div>
+
+<h3>Start Your Journey</h3>
+
+<p>
+Looking for personalized nutrition guidance?
+Get in touch to discuss your goals.
+</p>
+
+<a class="btn"
+style="margin-top:15px"
+href="contact.html">
+Contact Chetna
+</a>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 Chetna Dietitian. All Rights Reserved.
+</div>
+
+</footer>
+
+</body>
+</html>
