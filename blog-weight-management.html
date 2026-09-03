@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sustainable Weight Management | Chetna Dietitian</title>
+<meta name="description" content="Learn practical and sustainable weight management habits including balanced meals, protein, fibre, movement, sleep and realistic routines.">
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+
+:root{
+ --green:#173f35;
+ --green2:#28594a;
+ --sage:#dce8dc;
+ --cream:#fffaf4;
+ --peach:#e9b59e;
+ --peachlight:#f7e1d5;
+ --gold:#c9a46c;
+ --white:#fff;
+ --text:#3e463f;
+}
+
+body{
+ font-family:Arial,Helvetica,sans-serif;
+ background:var(--cream);
+ color:var(--text);
+ line-height:1.8;
+}
+
+header{
+ background:rgba(255,255,255,.97);
+ padding:14px 6%;
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ position:sticky;
+ top:0;
+ z-index:1000;
+ box-shadow:0 3px 20px rgba(0,0,0,.06);
+}
+
+.brand{
+ display:flex;
+ align-items:center;
+ gap:12px;
+}
+
+.brand img{
+ width:66px;
+ height:66px;
+ border-radius:50%;
+ object-fit:cover;
+ border:2px solid var(--gold);
+}
+
+.brand-text h2{
+ color:var(--green);
+ font-size:22px;
+ line-height:1.2;
+}
+
+.brand-text small{
+ color:#8a765a;
+ letter-spacing:1px;
+}
+
+nav{
+ display:flex;
+ align-items:center;
+ flex-wrap:wrap;
+}
+
+nav a{
+ color:var(--green);
+ text-decoration:none;
+ font-weight:600;
+ margin:8px 12px;
+}
+
+nav a:hover{color:#b46f55}
+
+.header-btn{
+ background:var(--green);
+ color:white!important;
+ padding:11px 20px;
+ border-radius:30px;
+}
+
+.hero{
+ padding:100px 7% 85px;
+ text-align:center;
+ background:
+ radial-gradient(circle at 10% 20%,#f2d3c4 0,transparent 28%),
+ radial-gradient(circle at 90% 80%,#dce8dc 0,transparent 30%),
+ #fff8f1;
+}
+
+.category{
+ color:#a8644d;
+ letter-spacing:2px;
+ font-size:12px;
+ font-weight:bold;
+}
+
+.hero h1{
+ max-width:920px;
+ margin:14px auto 22px;
+ color:var(--green);
+ font-family:Georgia,"Times New Roman",serif;
+ font-size:60px;
+ font-weight:500;
+ line-height:1.12;
+}
+
+.hero h1 span{
+ color:#b46f55;
+ font-style:italic;
+}
+
+.hero p{
+ max-width:760px;
+ margin:auto;
+ color:#626c64;
+ font-size:19px;
+}
+
+.hero-icon{
+ width:100px;
+ height:100px;
+ margin:30px auto 0;
+ background:white;
+ border-radius:50%;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ font-size:52px;
+ box-shadow:0 10px 30px rgba(23,63,53,.09);
+}
+
+.article{
+ max-width:850px;
+ margin:auto;
+ padding:80px 25px;
+}
+
+.back{
+ display:inline-block;
+ color:#a8644d;
+ text-decoration:none;
+ font-weight:bold;
+ margin-bottom:35px;
+}
+
+.article h2{
+ color:var(--green);
+ font-family:Georgia,serif;
+ font-size:36px;
+ line-height:1.25;
+ font-weight:500;
+ margin:48px 0 16px;
+}
+
+.article h3{
+ color:var(--green);
+ font-size:21px;
+ margin:28px 0 8px;
+}
+
+.article p{
+ margin-bottom:18px;
+ color:#566159;
+}
+
+.article ul{
+ margin:15px 0 25px 22px;
+ color:#566159;
+}
+
+.article li{
+ margin:9px 0;
+ padding-left:5px;
+}
+
+.takeaway{
+ background:#eef3ea;
+ border-left:5px solid var(--gold);
+ padding:30px;
+ border-radius:5px 22px 22px 5px;
+ margin:15px 0 45px;
+}
+
+.takeaway strong{
+ display:block;
+ color:var(--green);
+ font-size:19px;
+ margin-bottom:7px;
+}
+
+.pillars{
+ display:grid;
+ grid-template-columns:repeat(2,1fr);
+ gap:18px;
+ margin:28px 0 38px;
+}
+
+.pillar{
+ background:white;
+ border:1px solid #eee3d7;
+ border-radius:20px;
+ padding:24px;
+ box-shadow:0 5px 20px rgba(0,0,0,.035);
+}
+
+.pillar strong{
+ display:block;
+ color:var(--green);
+ margin-bottom:6px;
+}
+
+.tip{
+ background:var(--peachlight);
+ padding:27px 30px;
+ border-radius:22px;
+ margin:35px 0;
+}
+
+.tip strong{
+ color:#914f3b;
+}
+
+.dark-box{
+ background:var(--green);
+ color:white;
+ padding:38px;
+ border-radius:28px;
+ margin:35px 0;
+}
+
+.dark-box h3{
+ color:#f2c9b7;
+ font-family:Georgia,serif;
+ font-size:28px;
+ margin:0 0 18px;
+}
+
+.dark-box p{
+ color:#e5ede8;
+}
+
+.dark-box ul{
+ color:#e5ede8;
+ margin-bottom:0;
+}
+
+.disclaimer{
+ background:#f3f0e9;
+ padding:24px;
+ border-radius:18px;
+ margin-top:45px;
+ font-size:14px;
+ color:#62685f;
+}
+
+.cta{
+ margin:20px 7% 90px;
+ padding:70px 30px;
+ border-radius:35px;
+ background:
+ radial-gradient(circle at right,#416b5a 0,transparent 40%),
+ var(--green);
+ text-align:center;
+ color:white;
+}
+
+.cta h2{
+ font-family:Georgia,serif;
+ font-size:44px;
+ font-weight:500;
+ margin:10px 0 15px;
+}
+
+.cta p{
+ max-width:650px;
+ margin:0 auto 25px;
+ color:#e4ece7;
+}
+
+.btn{
+ display:inline-block;
+ background:#f2c9b7;
+ color:var(--green);
+ text-decoration:none;
+ padding:14px 28px;
+ border-radius:30px;
+ font-weight:bold;
+ transition:.3s;
+}
+
+.btn:hover{
+ transform:translateY(-3px);
+ box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+footer{
+ background:#102f28;
+ color:#dfe8e2;
+ padding:60px 7% 25px;
+}
+
+.footer-grid{
+ max-width:1180px;
+ margin:auto;
+ display:grid;
+ grid-template-columns:2fr 1fr 1fr 1.3fr;
+ gap:35px;
+}
+
+.footer-brand{
+ display:flex;
+ align-items:center;
+ gap:12px;
+ margin-bottom:15px;
+}
+
+.footer-brand img{
+ width:65px;
+ height:65px;
+ object-fit:cover;
+ border-radius:50%;
+ border:2px solid var(--gold);
+}
+
+footer h3{
+ color:white;
+ margin-bottom:15px;
+}
+
+footer a{
+ color:#dfe8e2;
+ text-decoration:none;
+ display:block;
+ margin:8px 0;
+}
+
+footer a:hover{color:#efc3af}
+
+.footer-bottom{
+ max-width:1180px;
+ margin:40px auto 0;
+ padding-top:22px;
+ border-top:1px solid rgba(255,255,255,.12);
+ text-align:center;
+ font-size:14px;
+}
+
+@media(max-width:800px){
+ .pillars{grid-template-columns:1fr}
+ .footer-grid{grid-template-columns:1fr 1fr}
+}
+
+@media(max-width:700px){
+ header{justify-content:center}
+
+ .brand{
+  width:100%;
+  justify-content:center;
+  margin-bottom:8px;
+ }
+
+ nav{justify-content:center}
+
+ nav a{
+  margin:5px 7px;
+  font-size:13px;
+ }
+
+ .header-btn{padding:7px 12px}
+
+ .hero{
+  padding:70px 22px;
+ }
+
+ .hero h1{
+  font-size:42px;
+ }
+
+ .article h2{
+  font-size:31px;
+ }
+
+ .cta h2{
+  font-size:36px;
+ }
+
+ .footer-grid{
+  grid-template-columns:1fr;
+ }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="brand">
+
+<img
+src="D3CB3807-84A4-4927-A0EB-FEA2B22D7262.PNG"
+alt="Chetna Dietitian Logo">
+
+<div class="brand-text">
+<h2>Chetna Dietitian</h2>
+<small>Nutrition • Wellness • Lifestyle</small>
+</div>
+
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="plans.html">Plans</a>
+<a href="blog.html">Blog</a>
+<a href="contact.html">Contact</a>
+<a class="header-btn" href="contact.html">Book Consultation</a>
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<span class="category">WEIGHT MANAGEMENT • HEALTHY HABITS</span>
+
+<h1>
+Small Habits for <span>Sustainable Weight Management</span>
+</h1>
+
+<p>
+Weight management does not have to mean extreme restriction.
+A more realistic approach focuses on balanced eating, movement,
+sleep and habits you can continue consistently.
+</p>
+
+<div class="hero-icon">⚖️</div>
+
+</section>
+
+
+<main class="article">
+
+<a class="back" href="blog.html">
+← Back to All Blogs
+</a>
+
+<div class="takeaway">
+
+<strong>Quick Takeaway</strong>
+
+Sustainable weight management usually comes from repeatable
+habits rather than quick fixes. Balanced meals, appropriate
+portions, regular movement, sleep and consistency all matter.
+
+</div>
+
+<p>
+It is easy to feel attracted to plans that promise dramatic
+results in a very short period of time. But weight management
+is usually more complex than simply eating as little as possible.
+</p>
+
+<p>
+Your daily food choices, activity level, sleep, stress, health
+conditions, medications and individual needs can all influence
+your progress.
+</p>
+
+
+<h2>Why Extreme Diets Can Be Difficult to Maintain</h2>
+
+<p>
+Very restrictive diets may feel manageable for a few days,
+but they can become difficult to sustain in real life.
+They may also make eating feel unnecessarily stressful.
+</p>
+
+<p>
+A practical approach does not require perfection. It focuses
+on creating an eating routine you can follow most of the time
+while still allowing flexibility.
+</p>
+
+<div class="tip">
+
+<strong>Chetna's Practical Tip:</strong>
+Instead of asking, “What is the fastest diet?”, try asking,
+“What habits can I realistically continue for the next few months?”
+
+</div>
+
+
+<h2>Build Your Meals Around Balance</h2>
+
+<p>
+Rather than removing entire food groups without a clear reason,
+focus on improving the overall structure of your meals.
+</p>
+
+<div class="pillars">
+
+<div class="pillar">
+<strong>🥗 Vegetables</strong>
+Include a variety of vegetables regularly to add fibre,
+volume and nutritional variety.
+</div>
+
+<div class="pillar">
+<strong>💪 Protein</strong>
+Use suitable protein sources such as dals, beans, paneer,
+tofu, curd, eggs, fish or chicken according to preference.
+</div>
+
+<div class="pillar">
+<strong>🌾 Quality Carbohydrates</strong>
+Choose sensible portions of foods such as whole grains,
+millets, oats, rice, roti, potatoes or other suitable options.
+</div>
+
+<div class="pillar">
+<strong>🥜 Healthy Fats</strong>
+Nuts, seeds and other suitable fat sources can be included
+in appropriate portions.
+</div>
+
+</div>
+
+
+<h2>Protein Can Support a More Balanced Meal</h2>
+
+<p>
+Protein is one important part of a balanced eating pattern.
+Including a suitable protein source at meals can help make
+meals more complete and satisfying.
+</p>
+
+<p>
+Vegetarian options can include dals, beans, chickpeas, paneer,
+tofu, yoghurt, milk, nuts and seeds. People who eat
+non-vegetarian foods may also include eggs, fish or chicken.
+</p>
+
+
+<h2>Fibre Matters Too</h2>
+
+<p>
+Vegetables, fruits, legumes and whole grains are useful sources
+of fibre. Fibre-rich foods can help improve the nutritional
+quality of your meals and support digestive health.
+</p>
+
+<p>
+One practical method is to increase vegetables gradually
+rather than trying to redesign your entire diet overnight.
+</p>
+
+
+<h2>Portion Awareness Without Obsession</h2>
+
+<p>
+Portions matter, but healthy eating should not require constant
+fear around food. You can learn to become more aware of how
+much you are serving while still enjoying your meals.
+</p>
+
+<p>
+Start by observing your usual portions. Notice whether meals
+contain vegetables and protein, and pay attention to how hungry
+or comfortably full you feel.
+</p>
+
+
+<div class="dark-box">
+
+<h3>A Simple Daily Focus</h3>
+
+<ul>
+<li>Build balanced meals instead of skipping them.</li>
+<li>Include protein regularly.</li>
+<li>Add vegetables and whole foods more often.</li>
+<li>Drink water throughout the day.</li>
+<li>Move your body regularly.</li>
+<li>Protect your sleep routine.</li>
+<li>Repeat realistic habits consistently.</li>
+</ul>
+
+</div>
+
+
+<h2>Don't Ignore Liquid Calories</h2>
+
+<p>
+Sweetened drinks, sugary coffees, packaged beverages and
+frequent high-calorie drinks can add energy without always
+feeling as satisfying as a meal.
+</p>
+
+<p>
+Water can be your main everyday drink, while other beverages
+can be chosen thoughtfully according to your routine and needs.
+</p>
+
+
+<h2>Movement Is Part of the Picture</h2>
+
+<p>
+Food is only one part of weight management. Regular physical
+activity can support overall health and help build a more active
+lifestyle.
+</p>
+
+<p>
+Movement does not need to begin with an extreme workout routine.
+Walking, strength training, cycling, swimming, sports or other
+activities can all contribute depending on your ability and
+preferences.
+</p>
+
+
+<h2>Sleep Can Affect Your Routine</h2>
+
+<p>
+Poor sleep can make healthy routines harder to maintain.
+When you are tired, meal planning, activity and appetite
+management may all feel more difficult.
+</p>
+
+<p>
+A consistent sleep schedule is therefore worth considering
+as part of your overall wellness routine.
+</p>
+
+
+<h2>Common Weight-Management Mistakes</h2>
+
+<ul>
+<li>Skipping meals and becoming very hungry later.</li>
+<li>Following an extremely restrictive plan that cannot be maintained.</li>
+<li>Expecting progress to happen at exactly the same rate every week.</li>
+<li>Ignoring protein and fibre in meals.</li>
+<li>Relying only on the weighing scale to judge progress.</li>
+<li>Changing the entire routine at once and becoming overwhelmed.</li>
+</ul>
+
+
+<h2>Look Beyond the Number on the Scale</h2>
+
+<p>
+Body weight naturally changes for many reasons, including
+hydration, food intake and other normal factors.
+</p>
+
+<p>
+You can also pay attention to improvements in your routines,
+meal quality, physical activity, consistency and overall
+wellbeing.
+</p>
+
+
+<h2>Start With One Change</h2>
+
+<p>
+You do not need to fix everything today. Choose one habit
+that feels realistic.
+</p>
+
+<p>
+For example, you might begin by adding vegetables to lunch,
+including a protein source at breakfast, going for a regular
+walk or planning meals before a busy day.
+</p>
+
+<p>
+Once one habit begins to feel normal, you can gradually
+build another.
+</p>
+
+
+<div class="disclaimer">
+
+<strong>General information:</strong>
+This article is for general education and does not provide
+an individualized weight-loss prescription. Weight management
+needs can vary significantly. If you have diabetes, thyroid
+disease, PCOS, kidney disease, are pregnant, take medications,
+or have another medical condition, discuss appropriate nutrition
+and weight goals with your qualified healthcare professional.
+
+</div>
+
+</main>
+
+
+<section class="cta">
+
+<span class="category" style="color:#f2c9b7">
+PERSONALIZED GUIDANCE
+</span>
+
+<h2>Want a Plan Built Around Your Routine?</h2>
+
+<p>
+Personalized nutrition guidance can take your food preferences,
+lifestyle and individual goals into account while helping you
+build more practical habits.
+</p>
+
+<a class="btn" href="contact.html">
+Book a Consultation
+</a>
+
+</section>
+
+
+<footer>
+
+<div class="footer-grid">
+
+<div>
+
+<div class="footer-brand">
+
+<img
+src="D3CB3807-84A4-4927-A0EB-FEA2B22D7262.PNG"
+alt="Chetna Dietitian Logo">
+
+<h3>Chetna Dietitian</h3>
+
+</div>
+
+<p>
+Personalized nutrition guidance for healthier,
+more practical and sustainable everyday living.
+</p>
+
+<p style="margin-top:15px">
+<strong>Eat Smart • Live Healthy • Feel Better</strong>
+</p>
+
+</div>
+
+
+<div>
+
+<h3>Quick Links</h3>
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="plans.html">Plans</a>
+<a href="blog.html">Blog</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+
+<div>
+
+<h3>More Articles</h3>
+
+<a href="blog-breakfast.html">Healthy Breakfast</a>
+<a href="blog-protein.html">Protein</a>
+<a href="blog-thyroid.html">Thyroid Nutrition</a>
+<a href="blog-blood-sugar.html">Blood Sugar</a>
+<a href="blog-healthy-habits.html">Healthy Habits</a>
+
+</div>
+
+
+<div>
+
+<h3>Start Your Journey</h3>
+
+<p>
+Looking for personalized nutrition guidance?
+Get in touch to discuss your goals.
+</p>
+
+<a class="btn"
+style="margin-top:15px"
+href="contact.html">
+Contact Chetna
+</a>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 Chetna Dietitian. All Rights Reserved.
+</div>
+
+</footer>
+
+</body>
+</html>
