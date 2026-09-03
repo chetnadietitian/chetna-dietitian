@@ -1,87 +1,592 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog | Chetna Dietitian</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body { margin:0; font-family:Arial,sans-serif; background:#fffaf4; color:#333; }
-    header { background:white; padding:18px 7%; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; box-shadow:0 2px 10px rgba(0,0,0,.08); }
-    .brand { display:flex; align-items:center; gap:12px; }
-    .brand img { width:65px; height:65px; border-radius:50%; object-fit:cover; }
-    .brand h2 { color:#245b45; }
-    nav a { margin:8px 12px; text-decoration:none; color:#245b45; font-weight:bold; }
-    .page { max-width:1050px; margin:auto; padding:60px 20px; }
-    h1 { text-align:center; color:#245b45; font-size:42px; }
-    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:24px; margin-top:40px; }
-    .post { background:white; padding:28px; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,.07); }
-    .post h2 { color:#245b45; }
-    footer { background:#245b45; color:white; text-align:center; padding:25px; margin-top:40px; }
-  </style>
+<title>Nutrition & Wellness Blog | Chetna Dietitian</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#fffaf5;
+  color:#354039;
+  line-height:1.7;
+}
+
+header{
+  background:rgba(255,255,255,.96);
+  padding:16px 7%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  box-shadow:0 3px 18px rgba(0,0,0,.07);
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.brand img{
+  width:68px;
+  height:68px;
+  border-radius:50%;
+  object-fit:cover;
+  border:2px solid #d7ad72;
+}
+
+.brand h2{
+  color:#174c3c;
+  font-size:24px;
+}
+
+nav{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+nav a{
+  color:#174c3c;
+  text-decoration:none;
+  font-weight:600;
+  margin:8px 13px;
+}
+
+nav a:hover{
+  color:#c57c5d;
+}
+
+/* HERO */
+
+.hero{
+  text-align:center;
+  padding:85px 20px 70px;
+  background:
+  radial-gradient(circle at top left,#f8d8ca 0,transparent 38%),
+  radial-gradient(circle at bottom right,#dbe9d5 0,transparent 38%),
+  #fff8ef;
+}
+
+.label{
+  color:#c57c5d;
+  font-weight:bold;
+  letter-spacing:2px;
+  font-size:13px;
+}
+
+.hero h1{
+  color:#174c3c;
+  font-size:52px;
+  margin:10px 0 15px;
+}
+
+.hero p{
+  max-width:720px;
+  margin:auto;
+  font-size:18px;
+  color:#59645d;
+}
+
+/* BLOG */
+
+.blog{
+  max-width:1150px;
+  margin:auto;
+  padding:70px 22px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:26px;
+}
+
+.article{
+  background:white;
+  border-radius:24px;
+  padding:32px 27px;
+  box-shadow:0 8px 28px rgba(46,76,59,.08);
+  transition:.3s;
+}
+
+.article:hover{
+  transform:translateY(-6px);
+}
+
+.article .icon{
+  font-size:42px;
+  margin-bottom:12px;
+}
+
+.article h2{
+  color:#174c3c;
+  font-size:23px;
+  margin-bottom:14px;
+}
+
+.article p{
+  margin-bottom:13px;
+  color:#59645d;
+}
+
+.article ul{
+  padding-left:20px;
+  margin-top:12px;
+}
+
+.article li{
+  margin:7px 0;
+}
+
+.tip{
+  background:#edf4e9;
+  padding:15px;
+  border-radius:12px;
+  margin-top:17px;
+  color:#174c3c;
+}
+
+/* CTA */
+
+.cta{
+  max-width:950px;
+  margin:10px auto 70px;
+  background:linear-gradient(135deg,#174c3c,#48745f);
+  color:white;
+  text-align:center;
+  padding:50px 25px;
+  border-radius:28px;
+}
+
+.cta h2{
+  font-size:34px;
+  margin-bottom:12px;
+}
+
+.btn{
+  display:inline-block;
+  background:#f6d5c4;
+  color:#174c3c;
+  padding:14px 27px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
+  margin-top:15px;
+}
+
+/* FOOTER */
+
+footer{
+  background:#123c30;
+  color:#f7f3eb;
+  text-align:center;
+  padding:35px 20px;
+}
+
+footer p{
+  margin:5px;
+}
+
+@media(max-width:750px){
+  header{
+    justify-content:center;
+    gap:12px;
+  }
+
+  .brand{
+    width:100%;
+    justify-content:center;
+  }
+
+  nav a{
+    margin:6px 8px;
+    font-size:14px;
+  }
+
+  .hero h1{
+    font-size:39px;
+  }
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <div class="brand">
-    <img src="D3CB3807-84A4-4927-A0EB-FEA2B22D7262.PNG" alt="Chetna Dietitian Logo">
-    <h2>Chetna Dietitian</h2>
-  </div>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="plans.html">Plans</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+<div class="brand">
+  <img src="D3CB3807-84A4-4927-A0EB-FEA2B22D7262.PNG"
+       alt="Chetna Dietitian Logo">
+  <h2>Chetna Dietitian</h2>
+</div>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="plans.html">Plans</a>
+  <a href="blog.html">Blog</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
 </header>
 
-<div class="page">
 
-  <h1>Nutrition & Wellness Blog</h1>
+<section class="hero">
 
-  <div class="grid">
+<p class="label">LEARN • NOURISH • GROW</p>
 
-    <div class="post">
-      <h2>Healthy Breakfast Ideas</h2>
-      <p>Simple breakfast ideas to start your day with balanced nutrition and energy.</p>
-    </div>
+<h1>Nutrition & Wellness Blog</h1>
 
-    <div class="post">
-      <h2>Smart Weight Management Tips</h2>
-      <p>Learn how small and consistent food choices can support sustainable weight management.</p>
-    </div>
+<p>
+Simple nutrition knowledge, practical food ideas and healthier
+lifestyle tips to help you make smarter everyday choices.
+</p>
 
-    <div class="post">
-      <h2>Protein in Everyday Meals</h2>
-      <p>Easy ways to include balanced protein sources in your regular meals.</p>
-    </div>
+</section>
 
-    <div class="post">
-      <h2>Thyroid-Friendly Eating</h2>
-      <p>General nutrition habits that may complement medical care and a balanced lifestyle.</p>
-    </div>
 
-    <div class="post">
-      <h2>Better Eating for Busy People</h2>
-      <p>Practical tips for eating healthier even when you have a busy schedule.</p>
-    </div>
+<section class="blog">
 
-    <div class="post">
-      <h2>Building Healthy Habits</h2>
-      <p>Why consistency matters more than extreme or short-term diets.</p>
-    </div>
+<div class="grid">
 
-  </div>
+
+<!-- BLOG 1 -->
+
+<article class="article">
+
+<div class="icon">🥣</div>
+
+<h2>Build a Better Breakfast</h2>
+
+<p>
+Breakfast can be a simple opportunity to include protein,
+fibre and nourishing foods at the beginning of your day.
+</p>
+
+<p>
+Instead of relying only on sugary cereals, biscuits or highly
+processed foods, try building breakfast around a combination
+of whole foods.
+</p>
+
+<ul>
+<li>Oats with fruit, nuts and seeds</li>
+<li>Vegetable poha with a protein-rich side</li>
+<li>Besan or moong dal chilla</li>
+<li>Eggs with vegetables for non-vegetarians</li>
+<li>Curd or yogurt with fruit and seeds</li>
+</ul>
+
+<div class="tip">
+<strong>Chetna's Tip:</strong> Think balance rather than perfection.
+Choose a breakfast that works with your routine and keeps you satisfied.
+</div>
+
+</article>
+
+
+<!-- BLOG 2 -->
+
+<article class="article">
+
+<div class="icon">⚖️</div>
+
+<h2>Sustainable Weight Management</h2>
+
+<p>
+Successful weight management is rarely about following the
+most extreme diet. Long-term habits matter much more than
+short-term restrictions.
+</p>
+
+<p>
+Start with realistic changes such as improving portion awareness,
+eating more vegetables, including appropriate protein sources
+and reducing frequent highly processed snacks.
+</p>
+
+<ul>
+<li>Build balanced meals</li>
+<li>Pay attention to portions</li>
+<li>Stay physically active</li>
+<li>Get adequate sleep</li>
+<li>Focus on consistency</li>
+</ul>
+
+<div class="tip">
+<strong>Remember:</strong> A plan you can follow consistently is usually
+more useful than an extreme plan you cannot maintain.
+</div>
+
+</article>
+
+
+<!-- BLOG 3 -->
+
+<article class="article">
+
+<div class="icon">💪</div>
+
+<h2>Protein in Everyday Meals</h2>
+
+<p>
+Protein is an important part of a balanced diet and can be
+included through both vegetarian and non-vegetarian foods.
+</p>
+
+<p>
+Vegetarian choices can include lentils, beans, chickpeas,
+soy foods, dairy products, nuts and seeds. Non-vegetarian
+options may include eggs, fish and lean meats.
+</p>
+
+<ul>
+<li>Add dal or beans to meals</li>
+<li>Include curd, paneer or tofu when suitable</li>
+<li>Use nuts and seeds in sensible portions</li>
+<li>Combine different foods throughout the day</li>
+</ul>
+
+<div class="tip">
+<strong>Simple idea:</strong> Instead of thinking about protein only at
+dinner, try including a suitable source in several meals.
+</div>
+
+</article>
+
+
+<!-- BLOG 4 -->
+
+<article class="article">
+
+<div class="icon">🦋</div>
+
+<h2>Nutrition & Thyroid Wellness</h2>
+
+<p>
+A balanced diet can be part of an overall healthy lifestyle for
+people managing thyroid conditions, alongside appropriate
+medical care.
+</p>
+
+<p>
+Focus on varied whole foods, adequate protein, vegetables,
+fruits and balanced meals rather than depending on a single
+“thyroid food” or restrictive diet.
+</p>
+
+<p>
+Individual requirements can vary depending on the thyroid
+condition, medications and other health factors.
+</p>
+
+<div class="tip">
+<strong>Important:</strong> Nutrition guidance should complement,
+not replace, treatment or medication prescribed by your doctor.
+</div>
+
+</article>
+
+
+<!-- BLOG 5 -->
+
+<article class="article">
+
+<div class="icon">🩸</div>
+
+<h2>Smarter Eating for Blood Sugar</h2>
+
+<p>
+Balanced meals and thoughtful carbohydrate choices can form
+part of a healthy lifestyle for people concerned about blood sugar.
+</p>
+
+<p>
+Try combining carbohydrate foods with vegetables, protein and
+other nutrient-rich foods rather than focusing only on removing
+carbohydrates completely.
+</p>
+
+<ul>
+<li>Choose more minimally processed foods</li>
+<li>Include vegetables regularly</li>
+<li>Be mindful of sugary drinks</li>
+<li>Pay attention to portions</li>
+<li>Follow medical advice for glucose management</li>
+</ul>
+
+<div class="tip">
+<strong>Important:</strong> Diabetes and prediabetes require
+individualized medical care. Diet changes should work alongside
+your healthcare professional's advice.
+</div>
+
+</article>
+
+
+<!-- BLOG 6 -->
+
+<article class="article">
+
+<div class="icon">🌸</div>
+
+<h2>Women's Wellness & Balanced Nutrition</h2>
+
+<p>
+Nutrition needs can change throughout different stages of life.
+A balanced eating pattern can support everyday energy,
+wellbeing and healthy routines.
+</p>
+
+<p>
+Focus on variety — vegetables, fruits, whole grains,
+appropriate protein sources, healthy fats and foods that
+provide important vitamins and minerals.
+</p>
+
+<div class="tip">
+<strong>Chetna's Approach:</strong> Your nutrition plan should consider
+your lifestyle and individual needs rather than following
+one universal diet.
+</div>
+
+</article>
+
+
+<!-- BLOG 7 -->
+
+<article class="article">
+
+<div class="icon">⏰</div>
+
+<h2>Healthy Eating for Busy Days</h2>
+
+<p>
+A busy schedule doesn't mean every meal needs to come from
+packaged or takeaway foods. A little planning can make healthier
+choices much easier.
+</p>
+
+<ul>
+<li>Plan a few meals before the week begins</li>
+<li>Keep simple ingredients available</li>
+<li>Prepare healthy snacks in advance</li>
+<li>Use leftovers thoughtfully</li>
+<li>Choose simple meals when time is limited</li>
+</ul>
+
+<div class="tip">
+<strong>Keep it simple:</strong> Healthy food doesn't always need
+a complicated recipe.
+</div>
+
+</article>
+
+
+<!-- BLOG 8 -->
+
+<article class="article">
+
+<div class="icon">🌿</div>
+
+<h2>Healthy Habits That Actually Last</h2>
+
+<p>
+Healthier living is built through repeated everyday choices,
+not one perfect week.
+</p>
+
+<p>
+Choose small changes you can realistically continue.
+That might mean drinking more water, adding vegetables to
+lunch, planning breakfast or becoming more active.
+</p>
+
+<p>
+Once one habit feels natural, you can gradually build another.
+This makes lifestyle improvement feel more manageable.
+</p>
+
+<div class="tip">
+<strong>Progress over perfection.</strong> Sustainable habits are
+built one step at a time.
+</div>
+
+</article>
+
+
+<!-- BLOG 9 -->
+
+<article class="article">
+
+<div class="icon">🍽️</div>
+
+<h2>What Does a Balanced Plate Look Like?</h2>
+
+<p>
+There isn't one perfect plate for everyone, but thinking about
+balance can make everyday meal planning easier.
+</p>
+
+<p>
+A meal may include vegetables, a suitable protein source,
+a carbohydrate source and other foods depending on your
+individual requirements.
+</p>
+
+<p>
+Your ideal portions can vary according to age, activity,
+health goals and individual nutritional needs.
+</p>
+
+<div class="tip">
+<strong>Personalization matters:</strong> Healthy eating isn't
+about copying someone else's plate — it's about finding
+what works appropriately for you.
+</div>
+
+</article>
+
 
 </div>
 
+</section>
+
+
+<section class="cta">
+
+<h2>Want Nutrition Guidance Designed for You?</h2>
+
+<p>
+General information is a great starting point, but your
+nutrition needs are personal.
+</p>
+
+<a class="btn" href="contact.html">
+Book a Consultation
+</a>
+
+</section>
+
+
 <footer>
-  <p><strong>Chetna Dietitian</strong></p>
-  <p>Eat Smart • Live Healthy • Feel Better</p>
+
+<p><strong>Chetna Dietitian</strong></p>
+
+<p>Eat Smart • Live Healthy • Feel Better</p>
+
+<p>© 2026 Chetna Dietitian. All Rights Reserved.</p>
+
 </footer>
 
 </body>
