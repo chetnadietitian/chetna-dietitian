@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>How to Build a Better Breakfast | Chetna Dietitian</title>
+<meta name="description" content="Learn how to build a balanced breakfast with protein, fibre and nourishing foods, with practical vegetarian and non-vegetarian breakfast ideas.">
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+
+:root{
+ --green:#173f35;
+ --green2:#28594a;
+ --sage:#dce8dc;
+ --cream:#fffaf4;
+ --peach:#e9b59e;
+ --peachlight:#f7e1d5;
+ --gold:#c9a46c;
+ --white:#fff;
+ --text:#3e463f;
+}
+
+body{
+ font-family:Arial,Helvetica,sans-serif;
+ background:var(--cream);
+ color:var(--text);
+ line-height:1.8;
+}
+
+/* HEADER */
+
+header{
+ background:rgba(255,255,255,.97);
+ padding:14px 6%;
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ position:sticky;
+ top:0;
+ z-index:1000;
+ box-shadow:0 3px 20px rgba(0,0,0,.06);
+}
+
+.brand{
+ display:flex;
+ align-items:center;
+ gap:12px;
+}
+
+.brand img{
+ width:66px;
+ height:66px;
+ border-radius:50%;
+ object-fit:cover;
+ border:2px solid var(--gold);
+}
+
+.brand-text h2{
+ color:var(--green);
+ font-size:22px;
+ line-height:1.2;
+}
+
+.brand-text small{
+ color:#8a765a;
+ letter-spacing:1px;
+}
+
+nav{
+ display:flex;
+ align-items:center;
+ flex-wrap:wrap;
+}
+
+nav a{
+ color:var(--green);
+ text-decoration:none;
+ font-weight:600;
+ margin:8px 12px;
+}
+
+nav a:hover{color:#b46f55}
+
+.header-btn{
+ background:var(--green);
+ color:white!important;
+ padding:11px 20px;
+ border-radius:30px;
+}
+
+/* ARTICLE HERO */
+
+.hero{
+ padding:100px 7% 85px;
+ text-align:center;
+ background:
+ radial-gradient(circle at 10% 20%,#f2d3c4 0,transparent 28%),
+ radial-gradient(circle at 90% 80%,#dce8dc 0,transparent 30%),
+ #fff8f1;
+}
+
+.category{
+ color:#a8644d;
+ letter-spacing:2px;
+ font-size:12px;
+ font-weight:bold;
+}
+
+.hero h1{
+ max-width:900px;
+ margin:14px auto 22px;
+ color:var(--green);
+ font-family:Georgia,"Times New Roman",serif;
+ font-size:60px;
+ font-weight:500;
+ line-height:1.12;
+}
+
+.hero h1 span{
+ color:#b46f55;
+ font-style:italic;
+}
+
+.hero p{
+ max-width:760px;
+ margin:auto;
+ color:#626c64;
+ font-size:19px;
+}
+
+.hero-icon{
+ width:100px;
+ height:100px;
+ margin:30px auto 0;
+ background:white;
+ border-radius:50%;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ font-size:52px;
+ box-shadow:0 10px 30px rgba(23,63,53,.09);
+}
+
+/* ARTICLE */
+
+.article{
+ max-width:850px;
+ margin:auto;
+ padding:80px 25px;
+}
+
+.back{
+ display:inline-block;
+ color:#a8644d;
+ text-decoration:none;
+ font-weight:bold;
+ margin-bottom:35px;
+}
+
+.article h2{
+ color:var(--green);
+ font-family:Georgia,serif;
+ font-size:36px;
+ line-height:1.25;
+ font-weight:500;
+ margin:48px 0 16px;
+}
+
+.article h3{
+ color:var(--green);
+ font-size:21px;
+ margin:28px 0 8px;
+}
+
+.article p{
+ margin-bottom:18px;
+ color:#566159;
+}
+
+.article ul{
+ margin:15px 0 25px 22px;
+ color:#566159;
+}
+
+.article li{
+ margin:9px 0;
+ padding-left:5px;
+}
+
+/* QUICK TAKEAWAY */
+
+.takeaway{
+ background:#eef3ea;
+ border-left:5px solid var(--gold);
+ padding:30px;
+ border-radius:5px 22px 22px 5px;
+ margin:15px 0 45px;
+}
+
+.takeaway strong{
+ display:block;
+ color:var(--green);
+ font-size:19px;
+ margin-bottom:7px;
+}
+
+/* FORMULA */
+
+.formula{
+ background:var(--green);
+ color:white;
+ padding:38px;
+ border-radius:28px;
+ margin:35px 0;
+}
+
+.formula h3{
+ color:#f2c9b7;
+ font-family:Georgia,serif;
+ font-size:28px;
+ margin:0 0 20px;
+}
+
+.formula-grid{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:15px;
+}
+
+.formula-box{
+ background:rgba(255,255,255,.09);
+ border:1px solid rgba(255,255,255,.1);
+ padding:20px;
+ border-radius:18px;
+}
+
+.formula-box strong{
+ display:block;
+ color:#f2c9b7;
+ margin-bottom:5px;
+}
+
+.formula-box span{
+ color:#e6eee9;
+ font-size:14px;
+}
+
+/* IDEAS */
+
+.ideas{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:18px;
+ margin:25px 0 35px;
+}
+
+.idea{
+ background:white;
+ border:1px solid #eee3d7;
+ border-radius:20px;
+ padding:23px;
+ box-shadow:0 5px 20px rgba(0,0,0,.035);
+}
+
+.idea strong{
+ color:var(--green);
+ display:block;
+ margin-bottom:5px;
+}
+
+/* TIP */
+
+.tip{
+ background:var(--peachlight);
+ padding:27px 30px;
+ border-radius:22px;
+ margin:35px 0;
+}
+
+.tip strong{
+ color:#914f3b;
+}
+
+/* DISCLAIMER */
+
+.disclaimer{
+ background:#f3f0e9;
+ padding:24px;
+ border-radius:18px;
+ margin-top:45px;
+ font-size:14px;
+ color:#62685f;
+}
+
+/* CTA */
+
+.cta{
+ margin:20px 7% 90px;
+ padding:70px 30px;
+ border-radius:35px;
+ background:
+ radial-gradient(circle at right,#416b5a 0,transparent 40%),
+ var(--green);
+ text-align:center;
+ color:white;
+}
+
+.cta h2{
+ font-family:Georgia,serif;
+ font-size:44px;
+ font-weight:500;
+ margin:10px 0 15px;
+}
+
+.cta p{
+ max-width:650px;
+ margin:0 auto 25px;
+ color:#e4ece7;
+}
+
+.btn{
+ display:inline-block;
+ background:#f2c9b7;
+ color:var(--green);
+ text-decoration:none;
+ padding:14px 28px;
+ border-radius:30px;
+ font-weight:bold;
+ transition:.3s;
+}
+
+.btn:hover{
+ transform:translateY(-3px);
+ box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+/* FOOTER */
+
+footer{
+ background:#102f28;
+ color:#dfe8e2;
+ padding:60px 7% 25px;
+}
+
+.footer-grid{
+ max-width:1180px;
+ margin:auto;
+ display:grid;
+ grid-template-columns:2fr 1fr 1fr 1.3fr;
+ gap:35px;
+}
+
+.footer-brand{
+ display:flex;
+ align-items:center;
+ gap:12px;
+ margin-bottom:15px;
+}
+
+.footer-brand img{
+ width:65px;
+ height:65px;
+ object-fit:cover;
+ border-radius:50%;
+ border:2px solid var(--gold);
+}
+
+footer h3{
+ color:white;
+ margin-bottom:15px;
+}
+
+footer a{
+ color:#dfe8e2;
+ text-decoration:none;
+ display:block;
+ margin:8px 0;
+}
+
+footer a:hover{color:#efc3af}
+
+.footer-bottom{
+ max-width:1180px;
+ margin:40px auto 0;
+ padding-top:22px;
+ border-top:1px solid rgba(255,255,255,.12);
+ text-align:center;
+ font-size:14px;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+ .formula-grid,
+ .ideas{
+  grid-template-columns:1fr;
+ }
+
+ .footer-grid{
+  grid-template-columns:1fr 1fr;
+ }
+}
+
+@media(max-width:700px){
+
+ header{justify-content:center}
+
+ .brand{
+  width:100%;
+  justify-content:center;
+  margin-bottom:8px;
+ }
+
+ nav{justify-content:center}
+
+ nav a{
+  margin:5px 7px;
+  font-size:13px;
+ }
+
+ .header-btn{padding:7px 12px}
+
+ .hero{
+  padding:70px 22px;
+ }
+
+ .hero h1{
+  font-size:42px;
+ }
+
+ .article h2{
+  font-size:31px;
+ }
+
+ .cta h2{
+  font-size:36px;
+ }
+
+ .footer-grid{
+  grid-template-columns:1fr;
+ }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="brand">
+
+<img
+src="D3CB3807-84A4-4927-A0EB-FEA2B22D7262.PNG"
+alt="Chetna Dietitian Logo">
+
+<div class="brand-text">
+<h2>Chetna Dietitian</h2>
+<small>Nutrition • Wellness • Lifestyle</small>
+</div>
+
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="plans.html">Plans</a>
+<a href="blog.html">Blog</a>
+<a href="contact.html">Contact</a>
+<a class="header-btn" href="contact.html">Book Consultation</a>
+</nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<span class="category">HEALTHY EATING • BREAKFAST</span>
+
+<h1>
+How to Build a <span>Better Breakfast</span>
+</h1>
+
+<p>
+A nourishing breakfast doesn't need to be complicated.
+A few thoughtful food choices can help you create a meal
+that is balanced, satisfying and practical for your morning.
+</p>
+
+<div class="hero-icon">🥣</div>
+
+</section>
+
+
+<!-- ARTICLE -->
+
+<main class="article">
+
+<a class="back" href="blog.html">
+← Back to All Blogs
+</a>
+
+
+<div class="takeaway">
+
+<strong>Quick Takeaway</strong>
+
+A simple way to build breakfast is to combine a source of
+protein with fibre-rich foods and, where suitable, a small
+amount of healthy fat. Choose portions and foods according
+to your individual needs.
+
+</div>
+
+
+<p>
+Breakfast can look very different from person to person.
+Some people enjoy a traditional Indian breakfast, others
+prefer oats, eggs or yoghurt, and some need something that
+can be prepared in just a few minutes.
+</p>
+
+<p>
+Instead of searching for one "perfect" breakfast, focus on
+building a meal that fits your routine while providing a
+useful mix of nutrients.
+</p>
+
+
+<h2>What Makes a Breakfast Balanced?</h2>
+
+<p>
+A balanced breakfast generally includes more than just one
+type of food. Combining different food groups can make the
+meal more satisfying and nutritionally varied.
+</p>
+
+
+<div class="formula">
+
+<h3>A Simple Breakfast Formula</h3>
+
+<div class="formula-grid">
+
+<div class="formula-box">
+<strong>1. Protein</strong>
+<span>
+Curd, paneer, tofu, eggs, dals, beans or other suitable
+protein-rich foods.
+</span>
+</div>
+
+<div class="formula-box">
+<strong>2. Fibre-Rich Foods</strong>
+<span>
+Whole grains, vegetables, fruit, oats and other minimally
+processed plant foods.
+</span>
+</div>
+
+<div class="formula-box">
+<strong>3. Healthy Fats</strong>
+<span>
+Nuts, seeds or other suitable sources in sensible portions.
+</span>
+</div>
+
+</div>
+
+</div>
+
+
+<h2>1. Include a Source of Protein</h2>
+
+<p>
+Protein is an important part of a balanced diet and can be
+included across meals throughout the day.
+</p>
+
+<p>
+Depending on your food preferences, breakfast protein
+sources may include:
+</p>
+
+<ul>
+<li>Curd or unsweetened yoghurt</li>
+<li>Paneer</li>
+<li>Tofu</li>
+<li>Besan</li>
+<li>Moong dal</li>
+<li>Milk, where suitable</li>
+<li>Eggs for people who eat them</li>
+<li>Nuts and seeds as part of the meal</li>
+</ul>
+
+<p>
+You don't need to depend on expensive protein products.
+Many familiar everyday foods can contribute protein to
+your breakfast.
+</p>
+
+
+<h2>2. Don't Forget Fibre</h2>
+
+<p>
+Vegetables, fruits, whole grains, legumes and seeds are
+useful sources of dietary fibre.
+</p>
+
+<p>
+For example, instead of having plain poha, you might add
+vegetables and pair it with a suitable protein source.
+Similarly, oats can be combined with fruit, seeds or
+yoghurt depending on your needs.
+</p>
+
+<div class="tip">
+
+<strong>Chetna's Practical Tip:</strong>
+Rather than completely changing your favourite breakfast,
+look for one or two simple ways to make it more balanced.
+
+</div>
+
+
+<h2>Easy Vegetarian Breakfast Ideas</h2>
+
+<div class="ideas">
+
+<div class="idea">
+<strong>🌿 Moong Dal Chilla</strong>
+Moong dal chilla with vegetables, paired with curd or
+another suitable accompaniment.
+</div>
+
+<div class="idea">
+<strong>🥣 Oats Bowl</strong>
+Oats with unsweetened yoghurt or milk, fruit and a small
+portion of nuts or seeds.
+</div>
+
+<div class="idea">
+<strong>🍽️ Vegetable Poha</strong>
+Poha prepared with plenty of vegetables and paired with
+a suitable protein-rich food.
+</div>
+
+<div class="idea">
+<strong>🌱 Besan Chilla</strong>
+Besan chilla with vegetables and a simple curd or paneer
+accompaniment.
+</div>
+
+<div class="idea">
+<strong>🥛 Yoghurt Bowl</strong>
+Unsweetened yoghurt with fruit, seeds and a suitable
+whole-grain addition.
+</div>
+
+<div class="idea">
+<strong>🥪 Paneer or Tofu Toast</strong>
+Whole-grain toast with paneer or tofu and fresh vegetables.
+</div>
+
+</div>
+
+
+<h2>Non-Vegetarian Breakfast Options</h2>
+
+<p>
+For people who include eggs or other non-vegetarian foods,
+breakfast can also be kept simple.
+</p>
+
+<div class="ideas">
+
+<div class="idea">
+<strong>🍳 Eggs & Whole-Grain Toast</strong>
+Eggs with vegetables and whole-grain toast can create a
+simple mixed breakfast.
+</div>
+
+<div class="idea">
+<strong>🥚 Vegetable Omelette</strong>
+An omelette with vegetables paired with an appropriate
+whole-grain food or other balanced accompaniment.
+</div>
+
+</div>
+
+
+<h2>What About Fruit?</h2>
+
+<p>
+Fruit can be a nutritious part of breakfast. It provides
+vitamins, minerals, fibre and a variety of plant compounds.
+</p>
+
+<p>
+Instead of thinking that everyone must eat the same fruit
+or the same quantity, choose fruit according to your
+preferences and individual nutrition needs.
+</p>
+
+
+<h2>Breakfast Foods to Have More Thoughtfully</h2>
+
+<p>
+No single food needs to be labelled as completely "good"
+or "bad". However, it can be helpful to pay attention to
+how frequently certain foods appear in your routine.
+</p>
+
+<p>
+Breakfasts based mainly on sugary drinks, heavily sweetened
+cereals, pastries or highly processed snack foods may provide
+less nutritional variety than a balanced meal containing
+whole foods.
+</p>
+
+<p>
+The goal isn't perfection. It is simply to make your
+everyday choices a little more nourishing.
+</p>
+
+
+<h2>What If You Don't Feel Hungry in the Morning?</h2>
+
+<p>
+Not everyone wakes up hungry. Your schedule, previous
+evening meal, sleep routine and personal preferences can
+all influence morning appetite.
+</p>
+
+<p>
+There is no need to force a very large breakfast simply
+because you have heard that everyone must eat one.
+Your overall eating pattern matters.
+</p>
+
+<p>
+If skipping meals regularly leaves you extremely hungry
+later in the day, however, it may be useful to review your
+meal timing and routine.
+</p>
+
+
+<h2>Five Practical Breakfast Habits</h2>
+
+<ul>
+<li>Plan breakfast before a busy morning whenever possible.</li>
+<li>Include a useful protein source.</li>
+<li>Add vegetables or fruit where practical.</li>
+<li>Choose minimally processed foods more often.</li>
+<li>Keep your routine realistic enough to repeat consistently.</li>
+</ul>
+
+
+<h2>Remember: Your Breakfast Can Be Personal</h2>
+
+<p>
+A breakfast that works beautifully for one person may not
+be suitable for another. Appetite, lifestyle, food
+preferences, medical conditions and nutrition goals can
+all influence what makes sense for you.
+</p>
+
+<p>
+Rather than following every food trend you see online,
+focus on balanced eating and seek individualized guidance
+when you need it.
+</p>
+
+
+<div class="disclaimer">
+
+<strong>General information:</strong>
+This article is for general nutrition education and is not
+a substitute for individualized medical or dietary advice.
+If you have diabetes, food allergies, digestive concerns,
+kidney disease or another medical condition, discuss
+appropriate dietary choices with your qualified healthcare
+professional.
+
+</div>
+
+</main>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<span class="category" style="color:#f2c9b7">
+PERSONALIZED NUTRITION
+</span>
+
+<h2>Want a Breakfast Plan That Fits Your Routine?</h2>
+
+<p>
+Personalized nutrition guidance can take your food
+preferences, lifestyle and individual goals into account.
+</p>
+
+<a class="btn" href="contact.html">
+Book a Consultation
+</a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-grid">
+
+<div>
+
+<div class="footer-brand">
+
+<img
+src="D3CB3807-84A4-4927-A0EB-FEA2B22D7262.PNG"
+alt="Chetna Dietitian Logo">
+
+<h3>Chetna Dietitian</h3>
+
+</div>
+
+<p>
+Personalized nutrition guidance for healthier,
+more practical and sustainable everyday living.
+</p>
+
+<p style="margin-top:15px">
+<strong>Eat Smart • Live Healthy • Feel Better</strong>
+</p>
+
+</div>
+
+
+<div>
+
+<h3>Quick Links</h3>
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="plans.html">Plans</a>
+<a href="blog.html">Blog</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+
+<div>
+
+<h3>More Articles</h3>
+
+<a href="blog-weight-management.html">Weight Management</a>
+<a href="blog-protein.html">Protein</a>
+<a href="blog-thyroid.html">Thyroid Nutrition</a>
+<a href="blog-blood-sugar.html">Blood Sugar</a>
+<a href="blog-healthy-habits.html">Healthy Habits</a>
+
+</div>
+
+
+<div>
+
+<h3>Start Your Journey</h3>
+
+<p>
+Looking for personalized nutrition guidance?
+Get in touch to discuss your goals.
+</p>
+
+<a class="btn"
+style="margin-top:15px"
+href="contact.html">
+Contact Chetna
+</a>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+© 2026 Chetna Dietitian. All Rights Reserved.
+</div>
+
+</footer>
+
+</body>
+</html>
