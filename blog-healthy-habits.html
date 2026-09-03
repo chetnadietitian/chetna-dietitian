@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Healthy Habits That Actually Last | Chetna Dietitian</title>
+<meta name="description" content="Build practical, sustainable healthy habits around food, movement, sleep, hydration and planning without extreme routines.">
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+
+:root{
+ --green:#173f35;
+ --green2:#28594a;
+ --sage:#dce8dc;
+ --cream:#fffaf4;
+ --peach:#e9b59e;
+ --peachlight:#f7e1d5;
+ --gold:#c9a46c;
+ --white:#fff;
+ --text:#3e463f;
+}
+
+body{
+ font-family:Arial,Helvetica,sans-serif;
+ background:var(--cream);
+ color:var(--text);
+ line-height:1.8;
+}
+
+header{
+ background:rgba(255,255,255,.97);
+ padding:14px 6%;
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ position:sticky;
+ top:0;
+ z-index:1000;
+ box-shadow:0 3px 20px rgba(0,0,0,.06);
+}
+
+.brand{
+ display:flex;
+ align-items:center;
+ gap:12px;
+}
+
+.brand img{
+ width:66px;
+ height:66px;
+ border-radius:50%;
+ object-fit:cover;
+ border:2px solid var(--gold);
+}
+
+.brand-text h2{
+ color:var(--green);
+ font-size:22px;
+ line-height:1.2;
+}
+
+.brand-text small{
+ color:#8a765a;
+ letter-spacing:1px;
+}
+
+nav{
+ display:flex;
+ align-items:center;
+ flex-wrap:wrap;
+}
+
+nav a{
+ color:var(--green);
+ text-decoration:none;
+ font-weight:600;
+ margin:8px 12px;
+}
+
+nav a:hover{color:#b46f55}
+
+.header-btn{
+ background:var(--green);
+ color:white!important;
+ padding:11px 20px;
+ border-radius:30px;
+}
+
+.hero{
+ padding:100px 7% 85px;
+ text-align:center;
+ background:
+ radial-gradient(circle at 10% 20%,#f2d3c4 0,transparent 28%),
+ radial-gradient(circle at 90% 80%,#dce8dc 0,transparent 30%),
+ #fff8f1;
+}
+
+.category{
+ color:#a8644d;
+ letter-spacing:2px;
+ font-size:12px;
+ font-weight:bold;
+}
+
+.hero h1{
+ max-width:920px;
+ margin:14px auto 22px;
+ color:var(--green);
+ font-family:Georgia,"Times New Roman",serif;
+ font-size:60px;
+ font-weight:500;
+ line-height:1.12;
+}
+
+.hero h1 span{
+ color:#b46f55;
+ font-style:italic;
+}
+
+.hero p{
+ max-width:760px;
+ margin:auto;
+ color:#626c64;
+ font-size:19px;
+}
+
+.hero-icon{
+ width:100px;
+ height:100px;
+ margin:30px auto 0;
+ background:white;
+ border-radius:50%;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ font-size:52px;
+ box-shadow:0 10px 30px rgba(23,63,53,.09);
+}
+
+.article{
+ max-width:850px;
+ margin:auto;
+ padding:80px 25px;
+}
+
+.back{
+ display:inline-block;
+ color:#a8644d;
+ text-decoration:none;
+ font-weight:bold;
+ margin-bottom:35px;
+}
+
+.article h2{
+ color:var(--green);
+ font-family:Georgia,serif;
+ font-size:36px;
+ line-height:1.25;
+ font-weight:500;
+ margin:48px 0 16px;
+}
+
+.article p{
+ margin-bottom:18px;
+ color:#566159;
+}
+
+.article ul{
+ margin:15px 0 25px 22px;
+ color:#566159;
+}
+
+.article li{
+ margin:9px 0;
+ padding-left:5px;
+}
+
+.takeaway{
+ background:#eef3ea;
+ border-left:5px solid var(--gold);
+ padding:30px;
+ border-radius:5px 22px 22px 5px;
+ margin:15px 0 45px;
+}
+
+.takeaway strong{
+ display:block;
+ color:var(--green);
+ font-size:19px;
+ margin-bottom:7px;
+}
+
+.habit-grid{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:18px;
+ margin:28px 0 38px;
+}
+
+.habit{
+ background:white;
+ border:1px solid #eee3d7;
+ border-radius:20px;
+ padding:24px;
+ box-shadow:0 5px 20px rgba(0,0,0,.035);
+}
+
+.habit strong{
+ display:block;
+ color:var(--green);
+ margin-bottom:6px;
+}
+
+.dark-box{
+ background:var(--green);
+ color:white;
+ padding:38px;
+ border-radius:28px;
+ margin:35px 0;
+}
+
+.dark-box h3{
+ color:#f2c9b7;
+ font-family:Georgia,serif;
+ font-size:28px;
+ margin-bottom:18px;
+}
+
+.dark-box p,
+.dark-box ul{
+ color:#e5ede8;
+}
+
+.tip{
+ background:var(--peachlight);
+ padding:27px 30px;
+ border-radius:22px;
+ margin:35px 0;
+}
+
+.tip strong{
+ color:#914f3b;
+}
+
+.disclaimer{
+ background:#f3f0e9;
+ padding:24px;
+ border-radius:18px;
+ margin-top:45px;
+ font-size:14px;
+ color:#62685f;
+}
+
+.cta{
+ margin:20px 7% 90px;
+ padding:70px 30px;
+ border-radius:35px;
+ background:
+ radial-gradient(circle at right,#416b5a 0,transparent 40%),
+ var(--green);
+ text-align:center;
+ color:white;
+}
+
+.cta h2{
+ font-family:Georgia,serif;
+ font-size:44px;
+ font-weight:500;
+ margin:10px 0 15px;
+}
+
+.cta p{
+ max-width:650px;
+ margin:0 auto 25px;
+ color:#e4ece7;
+}
+
+.btn{
+ display:inline-block;
+ background:#f2c9b7;
+ color:var(--green);
+ text-decoration:none;
+ padding:14px 28px;
+ border-radius:30px;
+ font-weight:bold;
+ transition:.3s;
+}
+
+.btn:hover{
+ transform:translateY(-3px);
+ box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+footer{
+ background:#102f28;
+ color:#dfe8e2;
+ padding:60px 7% 25px;
+}
+
+.footer-grid{
+ max-width:1180px;
+ margin:auto;
+ display:grid;
+ grid-template-columns:2fr 1fr 1fr 1.3fr;
+ gap:35px;
+}
+
+.footer-brand{
+ display:flex;
+ align-items:center;
+ gap:12px;
+ margin-bottom:15px;
+}
+
+.footer-brand img{
+ width:65px;
+ height:65px;
+ object-fit:cover;
+ border-radius:50%;
+ border:2px solid var(--gold);
+}
+
+footer h3{
+ color:white;
+ margin-bottom:15px;
+}
+
+footer a{
+ color:#dfe8e2;
+ text-decoration:none;
+ display:block;
+ margin:8px 0;
+}
+
+footer a:hover{color:#efc3af}
+
+.footer-bottom{
+ max-width:1180px;
+ margin:40px auto 0;
+ padding-top:22px;
+ border-top:1px solid rgba(255,255,255,.12);
+ text-align:center;
+ font-size:14px;
+}
+
+@media(max-width:800px){
+ .habit-grid{grid-template-columns:1fr}
+ .footer-grid{grid-template-columns:1fr 1fr}
+}
+
+@media(max-width:700px){
+ header{justify-content:center}
+
+ .brand{
+  width:100%;
+  justify-content:center;
+  margin-bottom:8px;
+ }
+
+ nav{justify-content:center}
+
+ nav a{
+  margin:5px 7px;
+  font-size:13px;
+ }
+
+ .header-btn{padding:7px 12px}
+
+ .hero{padding:70px 22px}
+ .hero h1{font-size:42px}
+ .article h2{font-size:31px}
+ .cta h2{font-size:36px}
+
+ .footer-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="brand">
+
+<img
+src="D3CB3807-84A4-4927-A0EB-FEA2B22D7262.PNG"
+alt="Chetna Dietitian Logo">
+
+<div class="brand-text">
+<h2>Chetna Dietitian</h2>
+<small>Nutrition • Wellness • Lifestyle</small>
+</div>
+
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="plans.html">Plans</a>
+<a href="blog.html">Blog</a>
+<a href="contact.html">Contact</a>
+<a class="header-btn" href="contact.html">Book Consultation</a>
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<span class="category">LIFESTYLE • CONSISTENCY • WELLNESS</span>
+
+<h1>
+Healthy Habits That<br>
+<span>Actually Last</span>
+</h1>
+
+<p>
+You do not need a perfect routine to live healthier.
+Small, realistic habits repeated consistently can be much
+more useful than extreme plans that are difficult to maintain.
+</p>
+
+<div class="hero-icon">🌿</div>
+
+</section>
+
+
+<main class="article">
+
+<a class="back" href="blog.html">
+← Back to All Blogs
+</a>
+
+
+<div class="takeaway">
+
+<strong>Quick Takeaway</strong>
+
+Choose one or two realistic changes, practice them consistently,
+and build from there. Sustainable health habits should fit into
+your real life rather than requiring perfection every day.
+
+</div>
+
+
+<p>
+Many people begin a health journey with a long list of rules:
+wake up earlier, exercise every day, stop sugar completely,
+cook every meal, drink more water, sleep eight hours and never
+eat outside.
+</p>
+
+<p>
+The problem is not that these goals sound healthy. The problem
+is trying to change everything at once.
+</p>
+
+<p>
+A simpler approach can make healthy living feel much more
+manageable.
+</p>
+
+
+<h2>Start With One Change</h2>
+
+<p>
+When motivation is high, it is easy to create an ambitious
+routine. But habits become useful when they can still be
+followed on ordinary, busy days.
+</p>
+
+<p>
+Choose one small behaviour first. For example, you might add
+vegetables to lunch, take a short walk after work or prepare
+breakfast the night before.
+</p>
+
+<p>
+Once that habit becomes easier, you can add another.
+</p>
+
+
+<div class="tip">
+
+<strong>Chetna's Practical Tip:</strong>
+Ask yourself: “Could I realistically continue this habit on a
+busy week?” If the answer is no, make the habit smaller and
+simpler.
+
+</div>
+
+
+<h2>Build Meals Around Balance, Not Perfection</h2>
+
+<p>
+Healthy eating does not require every meal to look perfect.
+Instead, look at the overall pattern of your diet.
+</p>
+
+<div class="habit-grid">
+
+<div class="habit">
+<strong>🥗 Add Vegetables</strong>
+Include vegetables regularly rather than waiting for a
+“perfect diet day.”
+</div>
+
+<div class="habit">
+<strong>💪 Include Protein</strong>
+Try to include a suitable protein source at your main meals.
+</div>
+
+<div class="habit">
+<strong>🌾 Choose Carbohydrates Thoughtfully</strong>
+Use appropriate portions and choose less-refined options
+more often when suitable.
+</div>
+
+<div class="habit">
+<strong>🍎 Keep Simple Foods Available</strong>
+Fruit, curd, roasted chana and other easy options can make
+busy days easier.
+</div>
+
+</div>
+
+
+<h2>Plan for Real Life</h2>
+
+<p>
+Your routine should include workdays, travel, celebrations,
+family meals and occasions when you simply do not have time
+to cook.
+</p>
+
+<p>
+A plan that only works under perfect conditions is difficult
+to sustain.
+</p>
+
+<p>
+Instead of asking, “How can I eat perfectly?” ask,
+“What is the best realistic choice available to me today?”
+</p>
+
+
+<h2>Make Healthy Choices Easier</h2>
+
+<p>
+Your environment can influence your habits. A little
+preparation can reduce the number of decisions you need
+to make when you are tired or busy.
+</p>
+
+<ul>
+<li>Keep useful breakfast foods at home.</li>
+<li>Wash or prepare vegetables in advance when convenient.</li>
+<li>Keep simple protein foods available.</li>
+<li>Carry water when you are out for long periods.</li>
+<li>Have one or two quick meal options for busy days.</li>
+</ul>
+
+
+<h2>Hydration Can Be Simple</h2>
+
+<p>
+You do not need complicated detox waters to make hydration
+a healthy habit.
+</p>
+
+<p>
+For many people, plain water can be the main everyday choice.
+The amount you need can vary with weather, activity, health
+and other individual factors.
+</p>
+
+<p>
+Keep water visible and accessible if remembering to drink
+is difficult.
+</p>
+
+
+<h2>Move in Ways You Can Maintain</h2>
+
+<p>
+Exercise does not have to begin with an intense routine.
+Walking, strength training, cycling, swimming, yoga and
+other activities can all contribute to an active lifestyle.
+</p>
+
+<p>
+The best routine is one that is suitable for your health
+and realistic enough to continue.
+</p>
+
+
+<div class="dark-box">
+
+<h3>A Simple Healthy-Day Checklist</h3>
+
+<ul>
+<li>Eat regular, balanced meals.</li>
+<li>Include vegetables and a suitable protein source.</li>
+<li>Drink water through the day.</li>
+<li>Move your body in an appropriate way.</li>
+<li>Take short breaks from long periods of sitting.</li>
+<li>Give sleep the attention it deserves.</li>
+<li>Do not expect perfection.</li>
+</ul>
+
+</div>
+
+
+<h2>Sleep Is Part of a Healthy Routine</h2>
+
+<p>
+Nutrition and exercise often receive most of the attention,
+but sleep is also an important part of overall wellbeing.
+</p>
+
+<p>
+Try to develop a reasonably consistent sleep routine when
+your lifestyle allows. Reducing late-night screen time and
+creating a calmer bedtime routine may help some people.
+</p>
+
+<p>
+Persistent sleep problems deserve appropriate medical
+attention rather than simply being ignored.
+</p>
+
+
+<h2>Don't Turn One Meal Into a Bad Week</h2>
+
+<p>
+Eating more than planned at a celebration or restaurant does
+not mean your entire routine has failed.
+</p>
+
+<p>
+Return to your normal eating pattern at the next meal instead
+of punishing yourself with extreme restriction.
+</p>
+
+<p>
+Consistency is built by returning to helpful habits again
+and again.
+</p>
+
+
+<h2>Avoid the “All or Nothing” Mindset</h2>
+
+<p>
+Healthy living is not divided into only two categories:
+perfect or failed.
+</p>
+
+<p>
+A short walk is still movement. A simple homemade meal can
+still be nourishing. Adding vegetables to an ordinary lunch
+is still progress.
+</p>
+
+<p>
+Small actions matter because they can be repeated.
+</p>
+
+
+<h2>Make Your Habits Specific</h2>
+
+<p>
+Vague goals such as “eat healthy” can be difficult to follow.
+A more specific habit gives you something concrete to do.
+</p>
+
+<div class="habit-grid">
+
+<div class="habit">
+<strong>Instead of:</strong>
+“I will drink more water.”
+<br><br>
+<strong>Try:</strong>
+“I will keep a water bottle at my desk.”
+</div>
+
+<div class="habit">
+<strong>Instead of:</strong>
+“I will exercise more.”
+<br><br>
+<strong>Try:</strong>
+“I will walk after dinner on four days this week.”
+</div>
+
+<div class="habit">
+<strong>Instead of:</strong>
+“I will eat better.”
+<br><br>
+<strong>Try:</strong>
+“I will add vegetables to lunch.”
+</div>
+
+<div class="habit">
+<strong>Instead of:</strong>
+“I will stop eating outside.”
+<br><br>
+<strong>Try:</strong>
+“I will choose a balanced option when I eat out.”
+</div>
+
+</div>
+
+
+<h2>Be Flexible With Your Routine</h2>
+
+<p>
+Your schedule will not look the same every day. Healthy habits
+should be flexible enough to adjust when work, family or travel
+changes your routine.
+</p>
+
+<p>
+You might have a full workout on one day and a short walk on
+another. You might prepare a detailed meal one evening and use
+a simple quick option the next.
+</p>
+
+<p>
+Flexibility can help you remain consistent over time.
+</p>
+
+
+<h2>Track What Actually Helps You</h2>
+
+<p>
+You do not have to track every calorie or every detail of your
+day to notice useful patterns.
+</p>
+
+<p>
+You can simply pay attention to questions such as:
+Are your meals keeping you satisfied? Are you regularly
+skipping breakfast because mornings are rushed? Are you
+sleeping very late? Are weekends completely different from
+weekdays?
+</p>
+
+<p>
+Understanding your routine can make it easier to choose the
+changes that matter most.
+</p>
+
+
+<h2>Healthy Habits Should Support Your Life</h2>
+
+<p>
+A nutrition plan should not make your entire life revolve
+around food.
+</p>
+
+<p>
+The aim is to create a healthier routine that still allows
+room for family, work, travel, social occasions and foods
+you enjoy.
+</p>
+
+<p>
+Personalized guidance can be useful when you need help
+turning general health advice into practical habits that
+fit your own lifestyle.
+</p>
+
+
+<div class="disclaimer">
+
+<strong>General Wellness Disclaimer:</strong>
+This article provides general nutrition and lifestyle
+information only. Individual needs vary, particularly for
+people with medical conditions, pregnancy, injuries or
+specific dietary requirements. Seek appropriate professional
+advice when needed.
+
+</div>
+
+</main>
+
+
+<section class="cta">
+
+<span class="category" style="color:#f2c9b7">
+BUILD HABITS THAT FIT YOUR LIFE
+</span>
+
+<h2>Ready for a More Practical Routine?</h2>
+
+<p>
+Personalized nutrition guidance can help you build realistic
+food and lifestyle habits around your schedule, preferences
+and goals.
+</p>
+
+<a class="btn" href="contact.html">
+Book a Consultation
+</a>
+
+</section>
+
+
+<footer>
+
+<div class="footer-grid">
+
+<div>
+
+<div class="footer-brand">
+
+<img
+src="D3CB3807-84A4-4927-A0EB-FEA2B22D7262.PNG"
+alt="Chetna Dietitian Logo">
+
+<h3>Chetna Dietitian</h3>
+
+</div>
+
+<p>
+Personalized nutrition guidance for healthier,
+more practical and sustainable everyday living.
+</p>
+
+<p style="margin-top:15px">
+<strong>Eat Smart • Live Healthy • Feel Better</strong>
+</p>
+
+</div>
+
+
+<div>
+
+<h3>Quick Links</h3>
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="plans.html">Plans</a>
+<a href="blog.html">Blog</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+
+<div>
+
+<h3>More Articles</h3>
+
+<a href="blog-breakfast.html">Healthy Breakfast</a>
+<a href="blog-weight-management.html">Weight Management</a>
+<a href="blog-protein.html">Protein</a>
+<a href="blog-thyroid.html">Thyroid Nutrition</a>
+<a href="blog-blood-sugar.html">Blood Sugar</a>
+
+</div>
+
+
+<div>
+
+<h3>Start Your Journey</h3>
+
+<p>
+Looking for personalized nutrition guidance?
+Get in touch to discuss your goals.
+</p>
+
+<a class="btn"
+style="margin-top:15px"
+href="contact.html">
+Contact Chetna
+</a>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 Chetna Dietitian. All Rights Reserved.
+</div>
+
+</footer>
+
+</body>
+</html>
