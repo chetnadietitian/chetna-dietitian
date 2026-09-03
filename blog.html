@@ -4,29 +4,45 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Nutrition & Wellness Blog | Chetna Dietitian</title>
+<title>Nutrition Blog | Chetna Dietitian</title>
+<meta name="description" content="Explore practical nutrition, weight management, protein, thyroid, blood sugar and healthy lifestyle articles from Chetna Dietitian.">
 
 <style>
+
 *{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+
+:root{
+  --green:#173f35;
+  --green2:#28594a;
+  --sage:#dce8dc;
+  --cream:#fffaf4;
+  --peach:#e9b59e;
+  --peachlight:#f7e1d5;
+  --gold:#c9a46c;
+  --white:#fff;
+  --text:#3e463f;
+}
 
 body{
   font-family:Arial,Helvetica,sans-serif;
-  background:#fffaf5;
-  color:#354039;
+  background:var(--cream);
+  color:var(--text);
   line-height:1.7;
 }
 
+/* HEADER */
+
 header{
-  background:rgba(255,255,255,.96);
-  padding:16px 7%;
+  background:rgba(255,255,255,.97);
+  padding:14px 6%;
   display:flex;
-  justify-content:space-between;
   align-items:center;
-  flex-wrap:wrap;
-  box-shadow:0 3px 18px rgba(0,0,0,.07);
+  justify-content:space-between;
   position:sticky;
   top:0;
   z-index:1000;
+  box-shadow:0 3px 20px rgba(0,0,0,.06);
 }
 
 .brand{
@@ -36,526 +52,702 @@ header{
 }
 
 .brand img{
-  width:68px;
-  height:68px;
+  width:66px;
+  height:66px;
   border-radius:50%;
   object-fit:cover;
-  border:2px solid #d7ad72;
+  border:2px solid var(--gold);
 }
 
-.brand h2{
-  color:#174c3c;
-  font-size:24px;
+.brand-text h2{
+  color:var(--green);
+  font-size:22px;
+  line-height:1.2;
+}
+
+.brand-text small{
+  color:#8a765a;
+  letter-spacing:1px;
 }
 
 nav{
   display:flex;
+  align-items:center;
   flex-wrap:wrap;
-  justify-content:center;
 }
 
 nav a{
-  color:#174c3c;
+  color:var(--green);
   text-decoration:none;
   font-weight:600;
-  margin:8px 13px;
+  margin:8px 12px;
 }
 
-nav a:hover{
-  color:#c57c5d;
+nav a:hover{color:#b46f55}
+
+.header-btn{
+  background:var(--green);
+  color:white!important;
+  padding:11px 20px;
+  border-radius:30px;
 }
 
 /* HERO */
 
 .hero{
   text-align:center;
-  padding:85px 20px 70px;
+  padding:105px 7%;
   background:
-  radial-gradient(circle at top left,#f8d8ca 0,transparent 38%),
-  radial-gradient(circle at bottom right,#dbe9d5 0,transparent 38%),
-  #fff8ef;
+    radial-gradient(circle at 10% 20%,#f2d3c4 0,transparent 28%),
+    radial-gradient(circle at 90% 80%,#dce8dc 0,transparent 30%),
+    #fff8f1;
 }
 
 .label{
-  color:#c57c5d;
-  font-weight:bold;
+  color:#a8644d;
   letter-spacing:2px;
-  font-size:13px;
+  font-size:12px;
+  font-weight:bold;
 }
 
 .hero h1{
-  color:#174c3c;
-  font-size:52px;
-  margin:10px 0 15px;
+  color:var(--green);
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:62px;
+  font-weight:500;
+  line-height:1.15;
+  margin:12px 0 20px;
+}
+
+.hero h1 span{
+  color:#b46f55;
+  font-style:italic;
 }
 
 .hero p{
-  max-width:720px;
+  max-width:760px;
   margin:auto;
-  font-size:18px;
-  color:#59645d;
+  color:#626c64;
+  font-size:19px;
 }
 
-/* BLOG */
+/* FEATURED ARTICLE */
 
-.blog{
-  max-width:1150px;
-  margin:auto;
-  padding:70px 22px;
+.featured-wrap{
+  max-width:1180px;
+  margin:90px auto 35px;
+  padding:0 25px;
 }
 
-.grid{
+.featured{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:26px;
+  grid-template-columns:1fr 1.15fr;
+  overflow:hidden;
+  border-radius:32px;
+  background:white;
+  box-shadow:0 12px 40px rgba(23,63,53,.08);
 }
 
-.article{
+.featured-art{
+  min-height:430px;
+  background:
+    radial-gradient(circle at 35% 35%,#f4d9cc,transparent 35%),
+    linear-gradient(145deg,#dce8dc,#f7e8db);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:120px;
+}
+
+.featured-content{
+  padding:55px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.category{
+  color:#a8644d;
+  letter-spacing:1.5px;
+  font-size:11px;
+  font-weight:bold;
+}
+
+.featured-content h2{
+  color:var(--green);
+  font-family:Georgia,serif;
+  font-size:42px;
+  line-height:1.2;
+  font-weight:500;
+  margin:10px 0 18px;
+}
+
+.featured-content p{
+  color:#657067;
+  margin-bottom:24px;
+}
+
+/* BLOG GRID */
+
+.blog-section{
+  max-width:1180px;
+  margin:auto;
+  padding:55px 25px 100px;
+}
+
+.heading{
+  max-width:720px;
+  margin:0 auto 50px;
+  text-align:center;
+}
+
+.heading h2{
+  color:var(--green);
+  font-family:Georgia,serif;
+  font-size:46px;
+  font-weight:500;
+  margin:10px 0 15px;
+}
+
+.heading p{
+  color:#657067;
+}
+
+.blog-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px;
+}
+
+.blog-card{
   background:white;
-  border-radius:24px;
-  padding:32px 27px;
-  box-shadow:0 8px 28px rgba(46,76,59,.08);
+  border-radius:25px;
+  overflow:hidden;
+  border:1px solid #eee4d9;
+  box-shadow:0 7px 25px rgba(0,0,0,.04);
   transition:.3s;
 }
 
-.article:hover{
-  transform:translateY(-6px);
+.blog-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 16px 38px rgba(23,63,53,.11);
 }
 
-.article .icon{
-  font-size:42px;
-  margin-bottom:12px;
+.blog-image{
+  height:220px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:75px;
 }
 
-.article h2{
-  color:#174c3c;
-  font-size:23px;
-  margin-bottom:14px;
+.bg1{background:linear-gradient(145deg,#e0ebdc,#f2e8d9)}
+.bg2{background:linear-gradient(145deg,#f5ddd1,#efe7d7)}
+.bg3{background:linear-gradient(145deg,#dce9df,#f6e1d7)}
+.bg4{background:linear-gradient(145deg,#f3dfd4,#e5eddf)}
+.bg5{background:linear-gradient(145deg,#e8ead9,#f5ded4)}
+.bg6{background:linear-gradient(145deg,#dce8dc,#f5e6d9)}
+
+.blog-content{
+  padding:28px;
 }
 
-.article p{
-  margin-bottom:13px;
-  color:#59645d;
+.blog-content h3{
+  color:var(--green);
+  font-family:Georgia,serif;
+  font-size:25px;
+  line-height:1.25;
+  font-weight:500;
+  margin:8px 0 12px;
 }
 
-.article ul{
-  padding-left:20px;
-  margin-top:12px;
+.blog-content p{
+  color:#657067;
+  margin-bottom:20px;
 }
 
-.article li{
-  margin:7px 0;
+.read{
+  color:#a8644d;
+  text-decoration:none;
+  font-weight:bold;
 }
 
-.tip{
-  background:#edf4e9;
-  padding:15px;
-  border-radius:12px;
-  margin-top:17px;
-  color:#174c3c;
+.blog-card-link{
+  color:inherit;
+  text-decoration:none;
+}
+
+/* NEWSLETTER STYLE SECTION */
+
+.wellness{
+  background:#eef3ea;
+  padding:90px 7%;
+  text-align:center;
+}
+
+.wellness-inner{
+  max-width:760px;
+  margin:auto;
+}
+
+.wellness h2{
+  color:var(--green);
+  font-family:Georgia,serif;
+  font-size:45px;
+  font-weight:500;
+  margin:10px 0 17px;
+}
+
+.wellness p{
+  color:#657067;
+  margin-bottom:25px;
+}
+
+/* BUTTON */
+
+.btn{
+  display:inline-block;
+  background:var(--green);
+  color:white;
+  text-decoration:none;
+  padding:14px 28px;
+  border-radius:30px;
+  font-weight:bold;
+  transition:.3s;
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 8px 20px rgba(0,0,0,.14);
+}
+
+.peach-btn{
+  background:#f2c9b7;
+  color:var(--green);
 }
 
 /* CTA */
 
 .cta{
-  max-width:950px;
-  margin:10px auto 70px;
-  background:linear-gradient(135deg,#174c3c,#48745f);
-  color:white;
+  margin:90px 7%;
+  padding:70px 30px;
+  border-radius:35px;
+  background:
+    radial-gradient(circle at right,#416b5a 0,transparent 40%),
+    var(--green);
   text-align:center;
-  padding:50px 25px;
-  border-radius:28px;
+  color:white;
 }
 
 .cta h2{
-  font-size:34px;
-  margin-bottom:12px;
+  font-family:Georgia,serif;
+  font-size:45px;
+  font-weight:500;
+  margin:10px 0 15px;
 }
 
-.btn{
-  display:inline-block;
-  background:#f6d5c4;
-  color:#174c3c;
-  padding:14px 27px;
-  border-radius:30px;
-  text-decoration:none;
-  font-weight:bold;
-  margin-top:15px;
+.cta p{
+  max-width:650px;
+  margin:0 auto 25px;
+  color:#e4ece7;
 }
 
 /* FOOTER */
 
 footer{
-  background:#123c30;
-  color:#f7f3eb;
+  background:#102f28;
+  color:#dfe8e2;
+  padding:60px 7% 25px;
+}
+
+.footer-grid{
+  max-width:1180px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr 1.3fr;
+  gap:35px;
+}
+
+.footer-brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:15px;
+}
+
+.footer-brand img{
+  width:65px;
+  height:65px;
+  object-fit:cover;
+  border-radius:50%;
+  border:2px solid var(--gold);
+}
+
+footer h3{
+  color:white;
+  margin-bottom:15px;
+}
+
+footer a{
+  color:#dfe8e2;
+  text-decoration:none;
+  display:block;
+  margin:8px 0;
+}
+
+footer a:hover{color:#efc3af}
+
+.footer-bottom{
+  max-width:1180px;
+  margin:40px auto 0;
+  padding-top:22px;
+  border-top:1px solid rgba(255,255,255,.12);
   text-align:center;
-  padding:35px 20px;
+  font-size:14px;
 }
 
-footer p{
-  margin:5px;
-}
+/* MOBILE */
 
-@media(max-width:750px){
-  header{
-    justify-content:center;
-    gap:12px;
+@media(max-width:950px){
+
+  .featured{
+    grid-template-columns:1fr;
   }
+
+  .featured-art{
+    min-height:300px;
+  }
+
+  .blog-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:700px){
+
+  header{justify-content:center}
 
   .brand{
     width:100%;
     justify-content:center;
+    margin-bottom:8px;
   }
 
+  nav{justify-content:center}
+
   nav a{
-    margin:6px 8px;
-    font-size:14px;
+    margin:5px 7px;
+    font-size:13px;
+  }
+
+  .header-btn{padding:7px 12px}
+
+  .hero{
+    padding:75px 22px;
   }
 
   .hero h1{
-    font-size:39px;
+    font-size:43px;
+  }
+
+  .featured-content{
+    padding:35px 25px;
+  }
+
+  .featured-content h2,
+  .heading h2,
+  .wellness h2,
+  .cta h2{
+    font-size:36px;
+  }
+
+  .blog-grid,
+  .footer-grid{
+    grid-template-columns:1fr;
   }
 }
+
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
+
 <header>
 
 <div class="brand">
-  <img src="D3CB3807-84A4-4927-A0EB-FEA2B22D7262.PNG"
-       alt="Chetna Dietitian Logo">
-  <h2>Chetna Dietitian</h2>
+
+<img
+src="D3CB3807-84A4-4927-A0EB-FEA2B22D7262.PNG"
+alt="Chetna Dietitian Logo">
+
+<div class="brand-text">
+<h2>Chetna Dietitian</h2>
+<small>Nutrition • Wellness • Lifestyle</small>
+</div>
+
 </div>
 
 <nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="services.html">Services</a>
-  <a href="plans.html">Plans</a>
-  <a href="blog.html">Blog</a>
-  <a href="contact.html">Contact</a>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="plans.html">Plans</a>
+<a href="blog.html">Blog</a>
+<a href="contact.html">Contact</a>
+<a class="header-btn" href="contact.html">Book Consultation</a>
 </nav>
 
 </header>
 
 
+<!-- HERO -->
+
 <section class="hero">
 
-<p class="label">LEARN • NOURISH • GROW</p>
+<span class="label">THE CHETNA JOURNAL</span>
 
-<h1>Nutrition & Wellness Blog</h1>
+<h1>
+Nutrition Knowledge<br>
+for <span>Real Life.</span>
+</h1>
 
 <p>
-Simple nutrition knowledge, practical food ideas and healthier
-lifestyle tips to help you make smarter everyday choices.
+Practical articles about food, nutrition and healthier living —
+written to make wellness easier to understand and more realistic
+to follow.
 </p>
 
 </section>
 
 
-<section class="blog">
+<!-- FEATURED BLOG -->
 
-<div class="grid">
+<section class="featured-wrap">
+
+<div class="featured">
+
+<div class="featured-art">
+🥣
+</div>
+
+<div class="featured-content">
+
+<span class="category">FEATURED • HEALTHY EATING</span>
+
+<h2>
+How to Build a Better Breakfast
+</h2>
+
+<p>
+A balanced breakfast doesn't need to be complicated.
+Learn how protein, fibre and nourishing whole foods can
+help you create a more satisfying start to your day.
+</p>
+
+<a class="btn" href="blog-breakfast.html">
+Read Full Article →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- BLOG ARTICLES -->
+
+<section class="blog-section">
+
+<div class="heading">
+
+<span class="label">EXPLORE THE JOURNAL</span>
+
+<h2>Latest Nutrition Articles</h2>
+
+<p>
+Choose a topic below. Each article opens on its own page
+with complete information and practical guidance.
+</p>
+
+</div>
+
+
+<div class="blog-grid">
 
 
 <!-- BLOG 1 -->
 
-<article class="article">
+<a class="blog-card-link" href="blog-breakfast.html">
 
-<div class="icon">🥣</div>
+<article class="blog-card">
 
-<h2>Build a Better Breakfast</h2>
+<div class="blog-image bg1">🥣</div>
+
+<div class="blog-content">
+
+<span class="category">HEALTHY EATING</span>
+
+<h3>How to Build a Better Breakfast</h3>
 
 <p>
-Breakfast can be a simple opportunity to include protein,
-fibre and nourishing foods at the beginning of your day.
+Simple ways to combine protein, fibre and balanced foods
+for a nourishing start to your day.
 </p>
 
-<p>
-Instead of relying only on sugary cereals, biscuits or highly
-processed foods, try building breakfast around a combination
-of whole foods.
-</p>
+<span class="read">Read Article →</span>
 
-<ul>
-<li>Oats with fruit, nuts and seeds</li>
-<li>Vegetable poha with a protein-rich side</li>
-<li>Besan or moong dal chilla</li>
-<li>Eggs with vegetables for non-vegetarians</li>
-<li>Curd or yogurt with fruit and seeds</li>
-</ul>
-
-<div class="tip">
-<strong>Chetna's Tip:</strong> Think balance rather than perfection.
-Choose a breakfast that works with your routine and keeps you satisfied.
 </div>
 
 </article>
+
+</a>
 
 
 <!-- BLOG 2 -->
 
-<article class="article">
+<a class="blog-card-link" href="blog-weight-management.html">
 
-<div class="icon">⚖️</div>
+<article class="blog-card">
 
-<h2>Sustainable Weight Management</h2>
+<div class="blog-image bg2">⚖️</div>
+
+<div class="blog-content">
+
+<span class="category">WEIGHT MANAGEMENT</span>
+
+<h3>Small Habits for Sustainable Weight Management</h3>
 
 <p>
-Successful weight management is rarely about following the
-most extreme diet. Long-term habits matter much more than
-short-term restrictions.
+Why realistic everyday habits can be more sustainable
+than constantly following extreme diets.
 </p>
 
-<p>
-Start with realistic changes such as improving portion awareness,
-eating more vegetables, including appropriate protein sources
-and reducing frequent highly processed snacks.
-</p>
+<span class="read">Read Article →</span>
 
-<ul>
-<li>Build balanced meals</li>
-<li>Pay attention to portions</li>
-<li>Stay physically active</li>
-<li>Get adequate sleep</li>
-<li>Focus on consistency</li>
-</ul>
-
-<div class="tip">
-<strong>Remember:</strong> A plan you can follow consistently is usually
-more useful than an extreme plan you cannot maintain.
 </div>
 
 </article>
+
+</a>
 
 
 <!-- BLOG 3 -->
 
-<article class="article">
+<a class="blog-card-link" href="blog-protein.html">
 
-<div class="icon">💪</div>
+<article class="blog-card">
 
-<h2>Protein in Everyday Meals</h2>
+<div class="blog-image bg3">💪</div>
+
+<div class="blog-content">
+
+<span class="category">NUTRITION BASICS</span>
+
+<h3>Protein in Your Everyday Meals</h3>
 
 <p>
-Protein is an important part of a balanced diet and can be
-included through both vegetarian and non-vegetarian foods.
+Understand everyday protein sources and practical ways
+to include them across your meals.
 </p>
 
-<p>
-Vegetarian choices can include lentils, beans, chickpeas,
-soy foods, dairy products, nuts and seeds. Non-vegetarian
-options may include eggs, fish and lean meats.
-</p>
+<span class="read">Read Article →</span>
 
-<ul>
-<li>Add dal or beans to meals</li>
-<li>Include curd, paneer or tofu when suitable</li>
-<li>Use nuts and seeds in sensible portions</li>
-<li>Combine different foods throughout the day</li>
-</ul>
-
-<div class="tip">
-<strong>Simple idea:</strong> Instead of thinking about protein only at
-dinner, try including a suitable source in several meals.
 </div>
 
 </article>
+
+</a>
 
 
 <!-- BLOG 4 -->
 
-<article class="article">
+<a class="blog-card-link" href="blog-thyroid.html">
 
-<div class="icon">🦋</div>
+<article class="blog-card">
 
-<h2>Nutrition & Thyroid Wellness</h2>
+<div class="blog-image bg4">🦋</div>
 
-<p>
-A balanced diet can be part of an overall healthy lifestyle for
-people managing thyroid conditions, alongside appropriate
-medical care.
-</p>
+<div class="blog-content">
 
-<p>
-Focus on varied whole foods, adequate protein, vegetables,
-fruits and balanced meals rather than depending on a single
-“thyroid food” or restrictive diet.
-</p>
+<span class="category">WELLNESS</span>
+
+<h3>Thyroid-Friendly Eating: Keep It Balanced</h3>
 
 <p>
-Individual requirements can vary depending on the thyroid
-condition, medications and other health factors.
+A sensible look at balanced nutrition and healthy
+eating habits while managing thyroid conditions.
 </p>
 
-<div class="tip">
-<strong>Important:</strong> Nutrition guidance should complement,
-not replace, treatment or medication prescribed by your doctor.
+<span class="read">Read Article →</span>
+
 </div>
 
 </article>
+
+</a>
 
 
 <!-- BLOG 5 -->
 
-<article class="article">
+<a class="blog-card-link" href="blog-blood-sugar.html">
 
-<div class="icon">🩸</div>
+<article class="blog-card">
 
-<h2>Smarter Eating for Blood Sugar</h2>
+<div class="blog-image bg5">🩸</div>
+
+<div class="blog-content">
+
+<span class="category">BALANCED NUTRITION</span>
+
+<h3>Smarter Eating for Blood Sugar</h3>
 
 <p>
-Balanced meals and thoughtful carbohydrate choices can form
-part of a healthy lifestyle for people concerned about blood sugar.
+Learn about balanced meals, thoughtful carbohydrate
+choices and practical everyday eating habits.
 </p>
 
-<p>
-Try combining carbohydrate foods with vegetables, protein and
-other nutrient-rich foods rather than focusing only on removing
-carbohydrates completely.
-</p>
+<span class="read">Read Article →</span>
 
-<ul>
-<li>Choose more minimally processed foods</li>
-<li>Include vegetables regularly</li>
-<li>Be mindful of sugary drinks</li>
-<li>Pay attention to portions</li>
-<li>Follow medical advice for glucose management</li>
-</ul>
-
-<div class="tip">
-<strong>Important:</strong> Diabetes and prediabetes require
-individualized medical care. Diet changes should work alongside
-your healthcare professional's advice.
 </div>
 
 </article>
+
+</a>
 
 
 <!-- BLOG 6 -->
 
-<article class="article">
+<a class="blog-card-link" href="blog-healthy-habits.html">
 
-<div class="icon">🌸</div>
+<article class="blog-card">
 
-<h2>Women's Wellness & Balanced Nutrition</h2>
+<div class="blog-image bg6">🌿</div>
+
+<div class="blog-content">
+
+<span class="category">HEALTHY LIFESTYLE</span>
+
+<h3>Healthy Habits That Actually Last</h3>
 
 <p>
-Nutrition needs can change throughout different stages of life.
-A balanced eating pattern can support everyday energy,
-wellbeing and healthy routines.
+Discover why small, repeatable changes can be more
+powerful than trying to change everything at once.
 </p>
 
-<p>
-Focus on variety — vegetables, fruits, whole grains,
-appropriate protein sources, healthy fats and foods that
-provide important vitamins and minerals.
-</p>
+<span class="read">Read Article →</span>
 
-<div class="tip">
-<strong>Chetna's Approach:</strong> Your nutrition plan should consider
-your lifestyle and individual needs rather than following
-one universal diet.
 </div>
 
 </article>
 
-
-<!-- BLOG 7 -->
-
-<article class="article">
-
-<div class="icon">⏰</div>
-
-<h2>Healthy Eating for Busy Days</h2>
-
-<p>
-A busy schedule doesn't mean every meal needs to come from
-packaged or takeaway foods. A little planning can make healthier
-choices much easier.
-</p>
-
-<ul>
-<li>Plan a few meals before the week begins</li>
-<li>Keep simple ingredients available</li>
-<li>Prepare healthy snacks in advance</li>
-<li>Use leftovers thoughtfully</li>
-<li>Choose simple meals when time is limited</li>
-</ul>
-
-<div class="tip">
-<strong>Keep it simple:</strong> Healthy food doesn't always need
-a complicated recipe.
-</div>
-
-</article>
-
-
-<!-- BLOG 8 -->
-
-<article class="article">
-
-<div class="icon">🌿</div>
-
-<h2>Healthy Habits That Actually Last</h2>
-
-<p>
-Healthier living is built through repeated everyday choices,
-not one perfect week.
-</p>
-
-<p>
-Choose small changes you can realistically continue.
-That might mean drinking more water, adding vegetables to
-lunch, planning breakfast or becoming more active.
-</p>
-
-<p>
-Once one habit feels natural, you can gradually build another.
-This makes lifestyle improvement feel more manageable.
-</p>
-
-<div class="tip">
-<strong>Progress over perfection.</strong> Sustainable habits are
-built one step at a time.
-</div>
-
-</article>
-
-
-<!-- BLOG 9 -->
-
-<article class="article">
-
-<div class="icon">🍽️</div>
-
-<h2>What Does a Balanced Plate Look Like?</h2>
-
-<p>
-There isn't one perfect plate for everyone, but thinking about
-balance can make everyday meal planning easier.
-</p>
-
-<p>
-A meal may include vegetables, a suitable protein source,
-a carbohydrate source and other foods depending on your
-individual requirements.
-</p>
-
-<p>
-Your ideal portions can vary according to age, activity,
-health goals and individual nutritional needs.
-</p>
-
-<div class="tip">
-<strong>Personalization matters:</strong> Healthy eating isn't
-about copying someone else's plate — it's about finding
-what works appropriately for you.
-</div>
-
-</article>
+</a>
 
 
 </div>
@@ -563,29 +755,133 @@ what works appropriately for you.
 </section>
 
 
-<section class="cta">
+<!-- WELLNESS -->
 
-<h2>Want Nutrition Guidance Designed for You?</h2>
+<section class="wellness">
+
+<div class="wellness-inner">
+
+<span class="label">A SIMPLE REMINDER</span>
+
+<h2>Nutrition Doesn't Need to Feel Complicated</h2>
 
 <p>
-General information is a great starting point, but your
-nutrition needs are personal.
+Use these articles to build your knowledge, discover practical
+ideas and understand healthier eating. Your individual needs,
+however, may be different from someone else's.
 </p>
 
-<a class="btn" href="contact.html">
+<a class="btn" href="services.html">
+Explore Nutrition Services
+</a>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<span class="label" style="color:#f2c9b7">
+PERSONALIZED SUPPORT
+</span>
+
+<h2>Want Guidance Designed Around You?</h2>
+
+<p>
+General nutrition information can be useful, but personalized
+guidance considers your lifestyle, preferences and individual goals.
+</p>
+
+<a class="btn peach-btn" href="contact.html">
 Book a Consultation
 </a>
 
 </section>
 
 
+<!-- FOOTER -->
+
 <footer>
 
-<p><strong>Chetna Dietitian</strong></p>
+<div class="footer-grid">
 
-<p>Eat Smart • Live Healthy • Feel Better</p>
+<div>
 
-<p>© 2026 Chetna Dietitian. All Rights Reserved.</p>
+<div class="footer-brand">
+
+<img
+src="D3CB3807-84A4-4927-A0EB-FEA2B22D7262.PNG"
+alt="Chetna Dietitian Logo">
+
+<h3>Chetna Dietitian</h3>
+
+</div>
+
+<p>
+Personalized nutrition guidance for healthier,
+more practical and sustainable everyday living.
+</p>
+
+<p style="margin-top:15px">
+<strong>Eat Smart • Live Healthy • Feel Better</strong>
+</p>
+
+</div>
+
+
+<div>
+
+<h3>Quick Links</h3>
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="plans.html">Plans</a>
+<a href="blog.html">Blog</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+
+<div>
+
+<h3>Popular Topics</h3>
+
+<a href="blog-breakfast.html">Healthy Breakfast</a>
+<a href="blog-weight-management.html">Weight Management</a>
+<a href="blog-protein.html">Protein</a>
+<a href="blog-thyroid.html">Thyroid Nutrition</a>
+<a href="blog-blood-sugar.html">Blood Sugar</a>
+
+</div>
+
+
+<div>
+
+<h3>Start Your Journey</h3>
+
+<p>
+Looking for personalized nutrition guidance?
+Get in touch to discuss your goals.
+</p>
+
+<a class="btn peach-btn"
+style="margin-top:15px"
+href="contact.html">
+Contact Chetna
+</a>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+© 2026 Chetna Dietitian. All Rights Reserved.
+</div>
 
 </footer>
 
