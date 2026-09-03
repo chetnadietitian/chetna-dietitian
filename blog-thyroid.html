@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Thyroid-Friendly Eating | Chetna Dietitian</title>
+<meta name="description" content="Learn practical principles for balanced eating while managing a thyroid condition, including protein, fibre, everyday meals and sensible nutrition habits.">
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+
+:root{
+ --green:#173f35;
+ --green2:#28594a;
+ --sage:#dce8dc;
+ --cream:#fffaf4;
+ --peach:#e9b59e;
+ --peachlight:#f7e1d5;
+ --gold:#c9a46c;
+ --white:#fff;
+ --text:#3e463f;
+}
+
+body{
+ font-family:Arial,Helvetica,sans-serif;
+ background:var(--cream);
+ color:var(--text);
+ line-height:1.8;
+}
+
+/* HEADER */
+
+header{
+ background:rgba(255,255,255,.97);
+ padding:14px 6%;
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ position:sticky;
+ top:0;
+ z-index:1000;
+ box-shadow:0 3px 20px rgba(0,0,0,.06);
+}
+
+.brand{
+ display:flex;
+ align-items:center;
+ gap:12px;
+}
+
+.brand img{
+ width:66px;
+ height:66px;
+ border-radius:50%;
+ object-fit:cover;
+ border:2px solid var(--gold);
+}
+
+.brand-text h2{
+ color:var(--green);
+ font-size:22px;
+ line-height:1.2;
+}
+
+.brand-text small{
+ color:#8a765a;
+ letter-spacing:1px;
+}
+
+nav{
+ display:flex;
+ align-items:center;
+ flex-wrap:wrap;
+}
+
+nav a{
+ color:var(--green);
+ text-decoration:none;
+ font-weight:600;
+ margin:8px 12px;
+}
+
+nav a:hover{color:#b46f55}
+
+.header-btn{
+ background:var(--green);
+ color:white!important;
+ padding:11px 20px;
+ border-radius:30px;
+}
+
+/* HERO */
+
+.hero{
+ padding:100px 7% 85px;
+ text-align:center;
+ background:
+ radial-gradient(circle at 10% 20%,#f2d3c4 0,transparent 28%),
+ radial-gradient(circle at 90% 80%,#dce8dc 0,transparent 30%),
+ #fff8f1;
+}
+
+.category{
+ color:#a8644d;
+ letter-spacing:2px;
+ font-size:12px;
+ font-weight:bold;
+}
+
+.hero h1{
+ max-width:920px;
+ margin:14px auto 22px;
+ color:var(--green);
+ font-family:Georgia,"Times New Roman",serif;
+ font-size:60px;
+ font-weight:500;
+ line-height:1.12;
+}
+
+.hero h1 span{
+ color:#b46f55;
+ font-style:italic;
+}
+
+.hero p{
+ max-width:760px;
+ margin:auto;
+ color:#626c64;
+ font-size:19px;
+}
+
+.hero-icon{
+ width:100px;
+ height:100px;
+ margin:30px auto 0;
+ background:white;
+ border-radius:50%;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ font-size:52px;
+ box-shadow:0 10px 30px rgba(23,63,53,.09);
+}
+
+/* ARTICLE */
+
+.article{
+ max-width:850px;
+ margin:auto;
+ padding:80px 25px;
+}
+
+.back{
+ display:inline-block;
+ color:#a8644d;
+ text-decoration:none;
+ font-weight:bold;
+ margin-bottom:35px;
+}
+
+.article h2{
+ color:var(--green);
+ font-family:Georgia,serif;
+ font-size:36px;
+ line-height:1.25;
+ font-weight:500;
+ margin:48px 0 16px;
+}
+
+.article p{
+ margin-bottom:18px;
+ color:#566159;
+}
+
+.article ul{
+ margin:15px 0 25px 22px;
+ color:#566159;
+}
+
+.article li{
+ margin:9px 0;
+ padding-left:5px;
+}
+
+/* BOXES */
+
+.takeaway{
+ background:#eef3ea;
+ border-left:5px solid var(--gold);
+ padding:30px;
+ border-radius:5px 22px 22px 5px;
+ margin:15px 0 45px;
+}
+
+.takeaway strong{
+ display:block;
+ color:var(--green);
+ font-size:19px;
+ margin-bottom:7px;
+}
+
+.food-grid{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:18px;
+ margin:28px 0 38px;
+}
+
+.food{
+ background:white;
+ border:1px solid #eee3d7;
+ border-radius:20px;
+ padding:24px;
+ box-shadow:0 5px 20px rgba(0,0,0,.035);
+}
+
+.food strong{
+ display:block;
+ color:var(--green);
+ margin-bottom:6px;
+}
+
+.dark-box{
+ background:var(--green);
+ color:white;
+ padding:38px;
+ border-radius:28px;
+ margin:35px 0;
+}
+
+.dark-box h3{
+ color:#f2c9b7;
+ font-family:Georgia,serif;
+ font-size:28px;
+ margin-bottom:18px;
+}
+
+.dark-box p,
+.dark-box ul{
+ color:#e5ede8;
+}
+
+.tip{
+ background:var(--peachlight);
+ padding:27px 30px;
+ border-radius:22px;
+ margin:35px 0;
+}
+
+.tip strong{
+ color:#914f3b;
+}
+
+.medical{
+ background:#fff;
+ border:1px solid #e5d7c5;
+ padding:30px;
+ border-radius:22px;
+ margin:35px 0;
+}
+
+.medical strong{
+ color:var(--green);
+ display:block;
+ font-size:19px;
+ margin-bottom:7px;
+}
+
+.disclaimer{
+ background:#f3f0e9;
+ padding:24px;
+ border-radius:18px;
+ margin-top:45px;
+ font-size:14px;
+ color:#62685f;
+}
+
+/* CTA */
+
+.cta{
+ margin:20px 7% 90px;
+ padding:70px 30px;
+ border-radius:35px;
+ background:
+ radial-gradient(circle at right,#416b5a 0,transparent 40%),
+ var(--green);
+ text-align:center;
+ color:white;
+}
+
+.cta h2{
+ font-family:Georgia,serif;
+ font-size:44px;
+ font-weight:500;
+ margin:10px 0 15px;
+}
+
+.cta p{
+ max-width:650px;
+ margin:0 auto 25px;
+ color:#e4ece7;
+}
+
+.btn{
+ display:inline-block;
+ background:#f2c9b7;
+ color:var(--green);
+ text-decoration:none;
+ padding:14px 28px;
+ border-radius:30px;
+ font-weight:bold;
+ transition:.3s;
+}
+
+.btn:hover{
+ transform:translateY(-3px);
+ box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+/* FOOTER */
+
+footer{
+ background:#102f28;
+ color:#dfe8e2;
+ padding:60px 7% 25px;
+}
+
+.footer-grid{
+ max-width:1180px;
+ margin:auto;
+ display:grid;
+ grid-template-columns:2fr 1fr 1fr 1.3fr;
+ gap:35px;
+}
+
+.footer-brand{
+ display:flex;
+ align-items:center;
+ gap:12px;
+ margin-bottom:15px;
+}
+
+.footer-brand img{
+ width:65px;
+ height:65px;
+ object-fit:cover;
+ border-radius:50%;
+ border:2px solid var(--gold);
+}
+
+footer h3{
+ color:white;
+ margin-bottom:15px;
+}
+
+footer a{
+ color:#dfe8e2;
+ text-decoration:none;
+ display:block;
+ margin:8px 0;
+}
+
+footer a:hover{color:#efc3af}
+
+.footer-bottom{
+ max-width:1180px;
+ margin:40px auto 0;
+ padding-top:22px;
+ border-top:1px solid rgba(255,255,255,.12);
+ text-align:center;
+ font-size:14px;
+}
+
+@media(max-width:800px){
+ .food-grid{grid-template-columns:1fr}
+ .footer-grid{grid-template-columns:1fr 1fr}
+}
+
+@media(max-width:700px){
+ header{justify-content:center}
+
+ .brand{
+  width:100%;
+  justify-content:center;
+  margin-bottom:8px;
+ }
+
+ nav{justify-content:center}
+
+ nav a{
+  margin:5px 7px;
+  font-size:13px;
+ }
+
+ .header-btn{padding:7px 12px}
+
+ .hero{padding:70px 22px}
+ .hero h1{font-size:42px}
+ .article h2{font-size:31px}
+ .cta h2{font-size:36px}
+ .footer-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="brand">
+
+<img
+src="D3CB3807-84A4-4927-A0EB-FEA2B22D7262.PNG"
+alt="Chetna Dietitian Logo">
+
+<div class="brand-text">
+<h2>Chetna Dietitian</h2>
+<small>Nutrition • Wellness • Lifestyle</small>
+</div>
+
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="plans.html">Plans</a>
+<a href="blog.html">Blog</a>
+<a href="contact.html">Contact</a>
+<a class="header-btn" href="contact.html">Book Consultation</a>
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<span class="category">THYROID • BALANCED NUTRITION</span>
+
+<h1>
+Thyroid-Friendly Eating:<br>
+<span>Keep It Balanced</span>
+</h1>
+
+<p>
+There is no single food or special diet that can cure a thyroid
+condition. A balanced eating pattern, appropriate medical care
+and sustainable lifestyle habits can work together to support
+overall wellbeing.
+</p>
+
+<div class="hero-icon">🦋</div>
+
+</section>
+
+
+<main class="article">
+
+<a class="back" href="blog.html">
+← Back to All Blogs
+</a>
+
+
+<div class="takeaway">
+
+<strong>Quick Takeaway</strong>
+
+If you have a thyroid condition, focus on an overall balanced
+diet rather than searching for miracle foods. Follow your
+doctor's treatment plan and get individualized advice when
+needed.
+
+</div>
+
+
+<p>
+Thyroid nutrition is surrounded by many online claims.
+You may see lists of foods that supposedly “fix” thyroid
+problems or foods that everyone with a thyroid condition
+is told to avoid completely.
+</p>
+
+<p>
+In reality, nutrition is more individual. Your thyroid
+condition, medication, other health concerns and overall
+diet all matter.
+</p>
+
+
+<h2>Start With a Balanced Eating Pattern</h2>
+
+<p>
+A thyroid-friendly approach does not need to consist of
+unusual foods. Familiar, nourishing foods can form the
+foundation of everyday meals.
+</p>
+
+<div class="food-grid">
+
+<div class="food">
+<strong>🥗 Vegetables</strong>
+Include a variety of vegetables across meals for fibre,
+vitamins, minerals and dietary variety.
+</div>
+
+<div class="food">
+<strong>💪 Protein</strong>
+Include suitable sources such as dal, beans, paneer, tofu,
+curd, eggs, fish or chicken according to your preferences.
+</div>
+
+<div class="food">
+<strong>🌾 Carbohydrates</strong>
+Choose suitable portions of whole grains and other
+carbohydrate foods as part of balanced meals.
+</div>
+
+<div class="food">
+<strong>🍎 Fruit</strong>
+Whole fruits can contribute fibre, vitamins and variety
+to a balanced diet.
+</div>
+
+</div>
+
+
+<h2>Protein Is Still Important</h2>
+
+<p>
+A thyroid condition does not change the basic importance
+of building nutritionally balanced meals.
+</p>
+
+<p>
+Protein sources can include dals, chickpeas, beans, paneer,
+tofu, curd and other suitable foods. People who eat
+non-vegetarian foods may also include eggs, fish or chicken.
+</p>
+
+<p>
+Try to include appropriate protein sources throughout the
+day rather than relying on only one meal.
+</p>
+
+
+<h2>What About Iodine?</h2>
+
+<p>
+Iodine is needed for normal thyroid hormone production,
+but this does not mean that taking large amounts is better.
+Both inadequate and excessive iodine intake can be a concern.
+</p>
+
+<p>
+Do not begin high-dose iodine supplements or concentrated
+iodine products simply because you have a thyroid condition
+unless they have been specifically recommended by an
+appropriate healthcare professional.
+</p>
+
+
+<div class="tip">
+
+<strong>Chetna's Practical Tip:</strong>
+More is not always better with nutrients. Avoid adding
+high-dose supplements simply because they are advertised
+as “thyroid boosters.”
+
+</div>
+
+
+<h2>Do You Need to Avoid Certain Vegetables?</h2>
+
+<p>
+Cruciferous vegetables such as cabbage, cauliflower and
+broccoli are sometimes presented online as foods that
+everyone with thyroid disease must completely avoid.
+</p>
+
+<p>
+For most people, there is no reason to automatically remove
+nutritious vegetables from a varied diet simply because
+they have a thyroid condition.
+</p>
+
+<p>
+Your overall intake and individual medical situation matter,
+so discuss specific restrictions with your healthcare
+professional if you have concerns.
+</p>
+
+
+<h2>What About Soy?</h2>
+
+<p>
+Soy foods such as tofu can be part of many balanced diets.
+However, certain foods and supplements can affect the
+absorption of some thyroid medications when taken too close
+to the medication.
+</p>
+
+<p>
+Rather than eliminating foods unnecessarily, follow the
+specific timing instructions provided for your medication
+by your doctor or pharmacist.
+</p>
+
+
+<div class="medical">
+
+<strong>Important: Thyroid Medication Timing</strong>
+
+If you take thyroid medication, follow the exact instructions
+given by your doctor or pharmacist about when to take it and
+how long to wait before eating or taking other medicines or
+supplements. Do not change your medication dose or timing
+based only on online nutrition advice.
+
+</div>
+
+
+<h2>Be Careful With Supplements</h2>
+
+<p>
+Products marketed for “thyroid support” may contain iodine,
+selenium or other ingredients in amounts that are not
+appropriate for everyone.
+</p>
+
+<p>
+Supplements can also interact with medications or lead to
+excessive intake of certain nutrients.
+</p>
+
+<p>
+If you are considering a supplement, discuss it with your
+doctor, pharmacist or another appropriately qualified
+healthcare professional.
+</p>
+
+
+<h2>Weight Management and Thyroid Conditions</h2>
+
+<p>
+People with thyroid conditions sometimes become frustrated
+with changes in body weight. It can be tempting to respond
+with a very restrictive diet.
+</p>
+
+<p>
+Instead, focus on an appropriate calorie intake, balanced
+meals, regular physical activity, adequate sleep and
+consistent habits while following your medical treatment.
+</p>
+
+<p>
+If your weight changes unexpectedly or you continue to have
+symptoms despite treatment, speak with your doctor rather
+than assuming food alone is responsible.
+</p>
+
+
+<div class="dark-box">
+
+<h3>A Practical Thyroid-Friendly Routine</h3>
+
+<ul>
+<li>Follow your prescribed medical treatment.</li>
+<li>Eat a varied and balanced diet.</li>
+<li>Include appropriate protein sources.</li>
+<li>Eat vegetables, fruits and fibre-rich foods regularly.</li>
+<li>Stay physically active according to your ability.</li>
+<li>Prioritize adequate sleep.</li>
+<li>Avoid unnecessary high-dose supplements.</li>
+<li>Follow medication timing instructions carefully.</li>
+</ul>
+
+</div>
+
+
+<h2>Don't Chase a “Thyroid Detox”</h2>
+
+<p>
+Special detox drinks, extreme fasting routines and restrictive
+plans are often marketed as ways to “clean” or “reset” the
+thyroid.
+</p>
+
+<p>
+A thyroid disorder is a medical condition. Food can support
+overall nutrition, but it should not be presented as a
+replacement for appropriate diagnosis and treatment.
+</p>
+
+
+<h2>Focus on Consistency</h2>
+
+<p>
+A sustainable routine is usually more useful than repeatedly
+switching between restrictive diets.
+</p>
+
+<p>
+Build meals you enjoy, include nutritious foods regularly
+and make gradual changes that fit your lifestyle.
+</p>
+
+<p>
+When medical conditions are involved, personalized nutrition
+guidance can help adapt general healthy-eating principles
+to your individual situation.
+</p>
+
+
+<div class="disclaimer">
+
+<strong>Medical & Nutrition Disclaimer:</strong>
+This article provides general nutrition information only and
+does not diagnose, treat or cure thyroid disease. Thyroid
+conditions require appropriate medical assessment and care.
+Do not stop, start or change thyroid medication or supplements
+without advice from your qualified healthcare professional.
+
+</div>
+
+</main>
+
+
+<section class="cta">
+
+<span class="category" style="color:#f2c9b7">
+PERSONALIZED NUTRITION
+</span>
+
+<h2>Need Practical Nutrition Guidance?</h2>
+
+<p>
+Personalized guidance can help you build balanced meals around
+your lifestyle, food preferences and individual nutrition needs
+while complementing appropriate medical care.
+</p>
+
+<a class="btn" href="contact.html">
+Book a Consultation
+</a>
+
+</section>
+
+
+<footer>
+
+<div class="footer-grid">
+
+<div>
+
+<div class="footer-brand">
+
+<img
+src="D3CB3807-84A4-4927-A0EB-FEA2B22D7262.PNG"
+alt="Chetna Dietitian Logo">
+
+<h3>Chetna Dietitian</h3>
+
+</div>
+
+<p>
+Personalized nutrition guidance for healthier,
+more practical and sustainable everyday living.
+</p>
+
+<p style="margin-top:15px">
+<strong>Eat Smart • Live Healthy • Feel Better</strong>
+</p>
+
+</div>
+
+
+<div>
+
+<h3>Quick Links</h3>
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="plans.html">Plans</a>
+<a href="blog.html">Blog</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+
+<div>
+
+<h3>More Articles</h3>
+
+<a href="blog-breakfast.html">Healthy Breakfast</a>
+<a href="blog-weight-management.html">Weight Management</a>
+<a href="blog-protein.html">Protein</a>
+<a href="blog-blood-sugar.html">Blood Sugar</a>
+<a href="blog-healthy-habits.html">Healthy Habits</a>
+
+</div>
+
+
+<div>
+
+<h3>Start Your Journey</h3>
+
+<p>
+Looking for personalized nutrition guidance?
+Get in touch to discuss your goals.
+</p>
+
+<a class="btn"
+style="margin-top:15px"
+href="contact.html">
+Contact Chetna
+</a>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 Chetna Dietitian. All Rights Reserved.
+</div>
+
+</footer>
+
+</body>
+</html>
