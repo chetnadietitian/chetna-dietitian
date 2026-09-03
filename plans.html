@@ -5,344 +5,984 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Nutrition Plans | Chetna Dietitian</title>
+<meta name="description" content="Explore personalized 7-day, 30-day and 90-day nutrition plans from Chetna Dietitian.">
 
 <style>
+
 *{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+
+:root{
+  --green:#173f35;
+  --green2:#28594a;
+  --sage:#dce8dc;
+  --cream:#fffaf4;
+  --peach:#e9b59e;
+  --peachlight:#f7e1d5;
+  --gold:#c9a46c;
+  --white:#fff;
+  --text:#3e463f;
+}
 
 body{
   font-family:Arial,Helvetica,sans-serif;
-  background:#fffaf5;
-  color:#354039;
+  background:var(--cream);
+  color:var(--text);
   line-height:1.7;
 }
 
+/* HEADER */
+
 header{
-  background:rgba(255,255,255,.96);
-  padding:16px 7%;
+  background:rgba(255,255,255,.97);
+  padding:14px 6%;
   display:flex;
-  justify-content:space-between;
   align-items:center;
-  flex-wrap:wrap;
-  box-shadow:0 3px 18px rgba(0,0,0,.07);
+  justify-content:space-between;
   position:sticky;
   top:0;
   z-index:1000;
+  box-shadow:0 3px 20px rgba(0,0,0,.06);
 }
 
-.brand{display:flex;align-items:center;gap:12px}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
 
 .brand img{
-  width:68px;
-  height:68px;
+  width:66px;
+  height:66px;
   border-radius:50%;
   object-fit:cover;
-  border:2px solid #d7ad72;
+  border:2px solid var(--gold);
 }
 
-.brand h2{color:#174c3c;font-size:24px}
+.brand-text h2{
+  color:var(--green);
+  font-size:22px;
+  line-height:1.2;
+}
 
-nav{display:flex;flex-wrap:wrap;justify-content:center}
+.brand-text small{
+  color:#8a765a;
+  letter-spacing:1px;
+}
+
+nav{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+}
 
 nav a{
-  color:#174c3c;
+  color:var(--green);
   text-decoration:none;
   font-weight:600;
-  margin:8px 13px;
+  margin:8px 12px;
 }
 
-nav a:hover{color:#c57c5d}
+nav a:hover{color:#b46f55}
+
+.header-btn{
+  background:var(--green);
+  color:white!important;
+  padding:11px 20px;
+  border-radius:30px;
+}
+
+/* HERO */
 
 .hero{
   text-align:center;
-  padding:85px 20px 70px;
+  padding:105px 7%;
   background:
-  radial-gradient(circle at top left,#f8d8ca 0,transparent 38%),
-  radial-gradient(circle at bottom right,#dbe9d5 0,transparent 38%),
-  #fff8ef;
+    radial-gradient(circle at 10% 20%,#f2d3c4 0,transparent 28%),
+    radial-gradient(circle at 90% 80%,#dce8dc 0,transparent 30%),
+    #fff8f1;
 }
 
 .label{
-  color:#c57c5d;
-  font-weight:bold;
+  color:#a8644d;
   letter-spacing:2px;
-  font-size:13px;
-}
-
-.hero h1{
-  color:#174c3c;
-  font-size:52px;
-  margin:10px 0 15px;
-}
-
-.hero p{
-  max-width:700px;
-  margin:auto;
-  font-size:18px;
-  color:#59645d;
-}
-
-.plans{
-  max-width:1150px;
-  margin:auto;
-  padding:75px 22px;
-}
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:25px;
-}
-
-.card{
-  background:white;
-  padding:38px 28px;
-  border-radius:24px;
-  box-shadow:0 8px 30px rgba(46,76,59,.09);
-  position:relative;
-  transition:.3s;
-}
-
-.card:hover{transform:translateY(-7px)}
-
-.popular{
-  border:2px solid #c57c5d;
-}
-
-.tag{
-  position:absolute;
-  top:-14px;
-  left:50%;
-  transform:translateX(-50%);
-  background:#c57c5d;
-  color:white;
-  padding:6px 18px;
-  border-radius:20px;
   font-size:12px;
   font-weight:bold;
 }
 
-.icon{
-  font-size:42px;
-  margin-bottom:12px;
+.hero h1{
+  color:var(--green);
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:62px;
+  line-height:1.15;
+  font-weight:500;
+  margin:12px 0 20px;
 }
 
-.card h2{
-  color:#174c3c;
-  margin-bottom:8px;
+.hero h1 span{
+  color:#b46f55;
+  font-style:italic;
 }
+
+.hero p{
+  max-width:780px;
+  margin:auto;
+  color:#626c64;
+  font-size:19px;
+}
+
+/* INTRO */
+
+.intro{
+  max-width:850px;
+  margin:auto;
+  text-align:center;
+  padding:85px 25px 45px;
+}
+
+.intro h2{
+  color:var(--green);
+  font-family:Georgia,serif;
+  font-size:46px;
+  font-weight:500;
+  margin:10px 0 17px;
+}
+
+.intro p{color:#657067}
+
+/* PLANS */
+
+.plans{
+  max-width:1180px;
+  margin:auto;
+  padding:25px 25px 100px;
+}
+
+.plan-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:27px;
+  align-items:stretch;
+}
+
+.plan{
+  background:white;
+  border-radius:28px;
+  padding:40px 30px;
+  border:1px solid #eee3d6;
+  box-shadow:0 10px 30px rgba(0,0,0,.05);
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  transition:.3s;
+}
+
+.plan:hover{
+  transform:translateY(-7px);
+  box-shadow:0 18px 40px rgba(23,63,53,.12);
+}
+
+.plan.featured{
+  background:var(--green);
+  color:white;
+  transform:translateY(-15px);
+  border:none;
+}
+
+.plan.featured:hover{
+  transform:translateY(-22px);
+}
+
+.ribbon{
+  position:absolute;
+  top:-15px;
+  left:50%;
+  transform:translateX(-50%);
+  background:#e9b59e;
+  color:var(--green);
+  padding:7px 18px;
+  border-radius:25px;
+  font-size:11px;
+  font-weight:bold;
+  letter-spacing:1px;
+  white-space:nowrap;
+}
+
+.plan-icon{
+  width:65px;
+  height:65px;
+  background:var(--sage);
+  border-radius:20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:31px;
+  margin-bottom:22px;
+}
+
+.featured .plan-icon{
+  background:rgba(255,255,255,.12);
+}
+
+.plan h2{
+  color:var(--green);
+  font-family:Georgia,serif;
+  font-size:30px;
+  font-weight:500;
+}
+
+.featured h2{color:white}
 
 .duration{
-  color:#c57c5d;
+  color:#a8644d;
   font-weight:bold;
-  margin-bottom:20px;
+  letter-spacing:1.5px;
+  font-size:13px;
+  margin:6px 0 18px;
 }
 
-.card ul{
-  padding-left:20px;
-  margin:22px 0;
+.featured .duration{
+  color:#f2c9b7;
 }
 
-.card li{
-  margin:10px 0;
+.description{
+  color:#657067;
+  min-height:85px;
+}
+
+.featured .description{
+  color:#e4ece7;
+}
+
+.plan h3{
+  color:var(--green);
+  margin:22px 0 10px;
+  font-size:16px;
+}
+
+.featured h3{color:#f2c9b7}
+
+.plan ul{
+  list-style:none;
+  margin-bottom:28px;
+}
+
+.plan li{
+  margin:11px 0;
+  padding-left:25px;
+  position:relative;
+}
+
+.plan li:before{
+  content:"✓";
+  position:absolute;
+  left:0;
+  color:#b46f55;
+  font-weight:bold;
+}
+
+.featured li:before{
+  color:#f2c9b7;
+}
+
+.plan .btn{
+  margin-top:auto;
 }
 
 .btn{
   display:inline-block;
-  background:#174c3c;
-  color:white;
-  padding:13px 25px;
-  border-radius:30px;
+  text-align:center;
   text-decoration:none;
+  padding:14px 25px;
+  border-radius:30px;
   font-weight:bold;
+  transition:.3s;
 }
+
+.btn-outline{
+  border:1px solid var(--green);
+  color:var(--green);
+}
+
+.btn-peach{
+  background:#f2c9b7;
+  color:var(--green);
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 8px 20px rgba(0,0,0,.13);
+}
+
+/* WHAT YOU GET */
+
+.includes{
+  background:#f0f4ed;
+  padding:95px 7%;
+}
+
+.heading{
+  max-width:750px;
+  margin:0 auto 50px;
+  text-align:center;
+}
+
+.heading h2{
+  color:var(--green);
+  font-family:Georgia,serif;
+  font-size:46px;
+  font-weight:500;
+  margin:10px 0 15px;
+}
+
+.heading p{color:#657067}
+
+.include-grid{
+  max-width:1050px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.include{
+  background:white;
+  border-radius:20px;
+  padding:28px 20px;
+  text-align:center;
+}
+
+.include span{
+  font-size:35px;
+}
+
+.include h3{
+  color:var(--green);
+  margin:10px 0 7px;
+}
+
+.include p{
+  color:#657067;
+  font-size:14px;
+}
+
+/* HOW TO CHOOSE */
+
+.choose{
+  max-width:1100px;
+  margin:auto;
+  padding:95px 25px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:65px;
+  align-items:center;
+}
+
+.choose-content h2{
+  color:var(--green);
+  font-family:Georgia,serif;
+  font-size:46px;
+  font-weight:500;
+  line-height:1.2;
+  margin:10px 0 20px;
+}
+
+.choose-content p{
+  color:#657067;
+  margin-bottom:15px;
+}
+
+.choose-box{
+  background:var(--green);
+  color:white;
+  padding:45px;
+  border-radius:30px;
+}
+
+.choose-row{
+  padding:17px 0;
+  border-bottom:1px solid rgba(255,255,255,.14);
+}
+
+.choose-row:last-child{border-bottom:none}
+
+.choose-row strong{
+  color:#f2c9b7;
+  display:block;
+  font-size:17px;
+}
+
+.choose-row span{
+  color:#e5ede8;
+}
+
+/* NOTE */
 
 .note{
-  max-width:850px;
-  margin:0 auto 70px;
-  padding:25px;
-  background:#edf4e9;
-  border-radius:18px;
-  text-align:center;
+  max-width:1050px;
+  margin:0 auto 85px;
+  padding:25px 30px;
+  background:#fff;
+  border-left:4px solid var(--gold);
+  border-radius:5px 18px 18px 5px;
+  box-shadow:0 5px 20px rgba(0,0,0,.04);
 }
 
-.note strong{color:#174c3c}
+.note strong{color:var(--green)}
+
+/* CTA */
 
 .cta{
-  max-width:950px;
-  margin:0 auto 70px;
-  background:linear-gradient(135deg,#174c3c,#48745f);
+  margin:0 7% 90px;
+  padding:70px 30px;
+  border-radius:35px;
+  background:
+    radial-gradient(circle at right,#416b5a 0,transparent 40%),
+    var(--green);
   color:white;
   text-align:center;
-  padding:50px 25px;
-  border-radius:28px;
 }
 
 .cta h2{
-  font-size:34px;
-  margin-bottom:12px;
+  font-family:Georgia,serif;
+  font-size:45px;
+  font-weight:500;
+  margin:10px 0 15px;
 }
 
-.cta .btn{
-  background:#f6d5c4;
-  color:#174c3c;
-  margin-top:15px;
+.cta p{
+  max-width:650px;
+  margin:0 auto 25px;
+  color:#e4ece7;
 }
+
+/* FOOTER */
 
 footer{
-  background:#123c30;
-  color:#f7f3eb;
+  background:#102f28;
+  color:#dfe8e2;
+  padding:60px 7% 25px;
+}
+
+.footer-grid{
+  max-width:1180px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr 1.3fr;
+  gap:35px;
+}
+
+.footer-brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:15px;
+}
+
+.footer-brand img{
+  width:65px;
+  height:65px;
+  border-radius:50%;
+  object-fit:cover;
+  border:2px solid var(--gold);
+}
+
+footer h3{
+  color:white;
+  margin-bottom:15px;
+}
+
+footer a{
+  color:#dfe8e2;
+  text-decoration:none;
+  display:block;
+  margin:8px 0;
+}
+
+footer a:hover{color:#efc3af}
+
+.footer-bottom{
+  max-width:1180px;
+  margin:40px auto 0;
+  padding-top:22px;
+  border-top:1px solid rgba(255,255,255,.12);
   text-align:center;
-  padding:35px 20px;
+  font-size:14px;
 }
 
-footer p{margin:5px}
+/* MOBILE */
 
-@media(max-width:850px){
-  .grid{grid-template-columns:1fr}
+@media(max-width:950px){
+
+  .plan-grid{
+    grid-template-columns:1fr;
+    max-width:650px;
+    margin:auto;
+  }
+
+  .plan.featured,
+  .plan.featured:hover{
+    transform:none;
+  }
+
+  .include-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .choose{
+    grid-template-columns:1fr;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+  }
 }
 
-@media(max-width:750px){
-  header{justify-content:center;gap:12px}
-  .brand{width:100%;justify-content:center}
-  nav a{margin:6px 8px;font-size:14px}
-  .hero h1{font-size:39px}
+@media(max-width:700px){
+
+  header{justify-content:center}
+
+  .brand{
+    width:100%;
+    justify-content:center;
+    margin-bottom:8px;
+  }
+
+  nav{justify-content:center}
+
+  nav a{
+    margin:5px 7px;
+    font-size:13px;
+  }
+
+  .header-btn{padding:7px 12px}
+
+  .hero{padding:75px 22px}
+
+  .hero h1{font-size:43px}
+
+  .intro h2,
+  .heading h2,
+  .choose-content h2,
+  .cta h2{
+    font-size:37px;
+  }
+
+  .include-grid,
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
+
+  .choose-box{
+    padding:30px 22px;
+  }
 }
+
 </style>
 </head>
 
+
 <body>
+
+<!-- HEADER -->
 
 <header>
 
 <div class="brand">
-  <img src="D3CB3807-84A4-4927-A0EB-FEA2B22D7262.PNG"
-       alt="Chetna Dietitian Logo">
-  <h2>Chetna Dietitian</h2>
+
+<img
+src="D3CB3807-84A4-4927-A0EB-FEA2B22D7262.PNG"
+alt="Chetna Dietitian Logo">
+
+<div class="brand-text">
+<h2>Chetna Dietitian</h2>
+<small>Nutrition • Wellness • Lifestyle</small>
+</div>
+
 </div>
 
 <nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="services.html">Services</a>
-  <a href="plans.html">Plans</a>
-  <a href="blog.html">Blog</a>
-  <a href="contact.html">Contact</a>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="plans.html">Plans</a>
+<a href="blog.html">Blog</a>
+<a href="contact.html">Contact</a>
+<a class="header-btn" href="contact.html">Book Consultation</a>
 </nav>
 
 </header>
 
+
+<!-- HERO -->
+
 <section class="hero">
-  <p class="label">CHOOSE YOUR JOURNEY</p>
 
-  <h1>Nutrition Plans</h1>
+<span class="label">PERSONALIZED NUTRITION PROGRAMS</span>
 
-  <p>
-    Choose a plan that fits your goals and lifestyle.
-    Each journey focuses on practical nutrition and sustainable habits.
-  </p>
+<h1>
+Choose a Plan.<br>
+Build a <span>Healthier Routine.</span>
+</h1>
+
+<p>
+Whether you want a simple start or longer-term nutrition
+support, choose a program designed to help you build practical,
+balanced and sustainable eating habits.
+</p>
+
 </section>
+
+
+<!-- INTRO -->
+
+<section class="intro">
+
+<span class="label">CHOOSE YOUR JOURNEY</span>
+
+<h2>One Goal. Three Ways to Begin.</h2>
+
+<p>
+Every plan is designed to provide structured nutrition guidance
+while keeping your lifestyle, food preferences and individual
+goals in mind.
+</p>
+
+</section>
+
+
+<!-- PLANS -->
 
 <section class="plans">
 
-<div class="grid">
+<div class="plan-grid">
 
-<div class="card">
-  <div class="icon">🌱</div>
 
-  <h2>Starter Plan</h2>
-  <p class="duration">7 Days</p>
+<!-- 7 DAY -->
 
-  <p>
-    A simple introduction to healthier eating and structured meal planning.
-  </p>
+<div class="plan">
 
-  <ul>
-    <li>Personalized nutrition guidance</li>
-    <li>7-day meal plan</li>
-    <li>Healthy food alternatives</li>
-    <li>Practical portion guidance</li>
-    <li>Everyday healthy eating tips</li>
-  </ul>
+<div class="plan-icon">🌱</div>
 
-  <a class="btn" href="contact.html">Enquire Now</a>
+<h2>Starter Plan</h2>
+
+<div class="duration">7 DAYS</div>
+
+<p class="description">
+A simple starting point for anyone who wants to bring
+more structure and balance into everyday eating.
+</p>
+
+<h3>WHAT'S INCLUDED</h3>
+
+<ul>
+<li>Personalized nutrition guidance</li>
+<li>7-day meal structure</li>
+<li>Meal and snack ideas</li>
+<li>Healthy food alternatives</li>
+<li>Practical portion guidance</li>
+<li>Everyday healthy eating tips</li>
+</ul>
+
+<a class="btn btn-outline" href="contact.html">
+Choose 7-Day Plan
+</a>
+
 </div>
 
 
-<div class="card popular">
+<!-- 30 DAY -->
 
-  <div class="tag">MOST POPULAR</div>
+<div class="plan featured">
 
-  <div class="icon">🌿</div>
+<div class="ribbon">BUILD CONSISTENCY</div>
 
-  <h2>Transformation Plan</h2>
-  <p class="duration">30 Days</p>
+<div class="plan-icon">🌿</div>
 
-  <p>
-    More structured nutrition support for building consistent,
-    healthier lifestyle habits.
-  </p>
+<h2>Transformation Plan</h2>
 
-  <ul>
-    <li>Personalized 30-day nutrition plan</li>
-    <li>Meal planning guidance</li>
-    <li>Weight-management support</li>
-    <li>Vegetarian or non-vegetarian options</li>
-    <li>Healthy food substitutions</li>
-    <li>Progress-focused nutrition guidance</li>
-  </ul>
+<div class="duration">30 DAYS</div>
 
-  <a class="btn" href="contact.html">Enquire Now</a>
+<p class="description">
+A more structured program for building consistency
+and developing healthier nutrition habits over time.
+</p>
+
+<h3>WHAT'S INCLUDED</h3>
+
+<ul>
+<li>Personalized nutrition approach</li>
+<li>30-day meal guidance</li>
+<li>Weight-management support</li>
+<li>Vegetarian or non-vegetarian options</li>
+<li>Healthy food substitutions</li>
+<li>Meal planning guidance</li>
+<li>Practical lifestyle support</li>
+</ul>
+
+<a class="btn btn-peach" href="contact.html">
+Choose 30-Day Plan
+</a>
+
 </div>
 
 
-<div class="card">
+<!-- 90 DAY -->
 
-  <div class="icon">✨</div>
+<div class="plan">
 
-  <h2>Wellness Plan</h2>
-  <p class="duration">90 Days</p>
+<div class="plan-icon">✨</div>
 
-  <p>
-    Long-term nutrition guidance focused on creating sustainable
-    eating and lifestyle habits.
-  </p>
+<h2>Wellness Plan</h2>
 
-  <ul>
-    <li>Personalized long-term nutrition approach</li>
-    <li>Structured meal guidance</li>
-    <li>Healthy habit support</li>
-    <li>Lifestyle-focused nutrition</li>
-    <li>Food preference customization</li>
-    <li>Long-term wellness guidance</li>
-  </ul>
+<div class="duration">90 DAYS</div>
 
-  <a class="btn" href="contact.html">Enquire Now</a>
+<p class="description">
+Longer-term nutrition guidance focused on building
+practical habits that can become part of everyday life.
+</p>
+
+<h3>WHAT'S INCLUDED</h3>
+
+<ul>
+<li>Personalized long-term approach</li>
+<li>Structured meal guidance</li>
+<li>Healthy habit support</li>
+<li>Lifestyle-focused nutrition</li>
+<li>Food preference customization</li>
+<li>Weight-management guidance</li>
+<li>Long-term wellness focus</li>
+</ul>
+
+<a class="btn btn-outline" href="contact.html">
+Choose 90-Day Plan
+</a>
+
 </div>
 
 </div>
 
 </section>
+
+
+<!-- INCLUDED -->
+
+<section class="includes">
+
+<div class="heading">
+
+<span class="label">THE CHETNA APPROACH</span>
+
+<h2>More Than a Diet Chart</h2>
+
+<p>
+Good nutrition guidance should help you understand how
+to make healthier choices in your everyday life.
+</p>
+
+</div>
+
+
+<div class="include-grid">
+
+<div class="include">
+<span>🥗</span>
+<h3>Personalized</h3>
+<p>Guidance built around your preferences and lifestyle.</p>
+</div>
+
+<div class="include">
+<span>🍽️</span>
+<h3>Practical</h3>
+<p>Food ideas designed to work with everyday routines.</p>
+</div>
+
+<div class="include">
+<span>🌿</span>
+<h3>Balanced</h3>
+<p>A focus on sensible eating instead of unnecessary extremes.</p>
+</div>
+
+<div class="include">
+<span>✨</span>
+<h3>Sustainable</h3>
+<p>Habits that can continue beyond a short-term plan.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CHOOSE -->
+
+<section class="choose">
+
+<div class="choose-content">
+
+<span class="label">WHICH PLAN IS FOR ME?</span>
+
+<h2>
+Start Where It Feels Right for You
+</h2>
+
+<p>
+You don't need to choose the longest program to begin.
+The right starting point depends on the type of guidance
+and duration you're looking for.
+</p>
+
+<p>
+If you're unsure, you can discuss your goals before
+choosing a plan.
+</p>
+
+<a class="btn btn-peach" href="contact.html">
+Ask Chetna
+</a>
+
+</div>
+
+
+<div class="choose-box">
+
+<div class="choose-row">
+<strong>7-Day Starter</strong>
+<span>A simple introduction to healthier, structured eating.</span>
+</div>
+
+<div class="choose-row">
+<strong>30-Day Transformation</strong>
+<span>For building greater consistency with nutrition habits.</span>
+</div>
+
+<div class="choose-row">
+<strong>90-Day Wellness</strong>
+<span>For longer-term lifestyle and nutrition guidance.</span>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- NOTE -->
 
 <div class="note">
-  <strong>Every person is different.</strong>
-  Plans can be personalized according to lifestyle, food preferences
-  and individual nutrition goals.
+
+<strong>Please note:</strong>
+Nutrition plans are personalized according to individual
+requirements. Where a medical condition is involved,
+nutrition guidance should complement appropriate care from
+your qualified healthcare professional and should not replace
+medical diagnosis, medication or treatment.
+
 </div>
 
+
+<!-- CTA -->
+
 <section class="cta">
-  <h2>Not Sure Which Plan to Choose?</h2>
 
-  <p>
-    Get in touch and find a nutrition plan that fits your needs.
-  </p>
+<span class="label" style="color:#f2c9b7">
+READY TO BEGIN?
+</span>
 
-  <a class="btn" href="contact.html">Book a Consultation</a>
+<h2>Your Healthier Journey Can Start Today</h2>
+
+<p>
+Get in touch to discuss your goals and choose the nutrition
+program that best fits your needs.
+</p>
+
+<a class="btn btn-peach" href="contact.html">
+Book a Consultation
+</a>
+
 </section>
 
+
+<!-- FOOTER -->
+
 <footer>
-  <p><strong>Chetna Dietitian</strong></p>
-  <p>Eat Smart • Live Healthy • Feel Better</p>
-  <p>© 2026 Chetna Dietitian. All Rights Reserved.</p>
+
+<div class="footer-grid">
+
+<div>
+
+<div class="footer-brand">
+
+<img
+src="D3CB3807-84A4-4927-A0EB-FEA2B22D7262.PNG"
+alt="Chetna Dietitian Logo">
+
+<h3>Chetna Dietitian</h3>
+
+</div>
+
+<p>
+Personalized nutrition guidance for healthier,
+more practical and sustainable everyday living.
+</p>
+
+<p style="margin-top:15px">
+<strong>Eat Smart • Live Healthy • Feel Better</strong>
+</p>
+
+</div>
+
+
+<div>
+
+<h3>Quick Links</h3>
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="plans.html">Plans</a>
+<a href="blog.html">Blog</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+
+<div>
+
+<h3>Nutrition</h3>
+
+<a href="services.html">Weight Management</a>
+<a href="services.html">Personalized Plans</a>
+<a href="services.html">Thyroid Nutrition</a>
+<a href="services.html">Women's Wellness</a>
+<a href="services.html">Online Consultation</a>
+
+</div>
+
+
+<div>
+
+<h3>Start Your Journey</h3>
+
+<p>
+Not sure which program is right for you?
+Get in touch to discuss your goals.
+</p>
+
+<a class="btn btn-peach"
+style="margin-top:15px"
+href="contact.html">
+Contact Chetna
+</a>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+© 2026 Chetna Dietitian. All Rights Reserved.
+</div>
+
 </footer>
 
 </body>
